@@ -7,23 +7,29 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">/*icons for navigational bar*/
 <style>
  /*responsive navigator*/
- .navi {z-index:7;list-style-type: none ;padding: 0;background-color:white; position: fixed; top: 0; width:101.5%;margin-left:-1.5% ; }
- .navi-right a {font-size: 20px;font-weight: bold; color: black; padding: 10px;text-decoration: none;text-align: left;display: block;overflow:auto;}
+ .navi {z-index:7;list-style-type: none ;padding: 0px;background-color:white; position: fixed; top: 0; width:101.5%;margin-left:-1.5% ;height: 43px; }
+ .navi-right a {font-size: 20px;font-weight: bold; color: black; ;padding: 10px; ;text-decoration: none;text-align: left;display: block;overflow:auto;}
  .navi-right a:hover {font-weight: bold; background-color: grey; color: red;}
  .navi-right a{float:right;}
  .navi a.this-one-is-active { background-color: black;  color: white;}
 .navi-left{margin-left:20px;font:30px Arial; color:orange; font-family: Century Gothic;font-weight:bold}
 
 /*dropdown navigator*/
-.dropdown {position: relative; display: block;font-size:  px; }
+.dropdown {position: relative; display: block;height:43px;}
 
-.insidedropdown {background-color: orange;display: none;position: absolute; box-shadow: 10px 10px 16px 0px rgba(0,0,0,1); z-index: 5 ;font-size: 0px;}
+.insidedropdown {background-color: orange;display: none ;position: absolute; box-shadow: 10px 10px 16px 0px rgba(0,0,0,1); z-index: 3;width: px ;padding:0px;margin-top:-4px;}
+.insidedropdown a {
+  color: black;
+  padding-right:px;
+  text-decoration: none;
+  display: block;font-size:18px;  ;
+}
 .insidedropdown a:hover {font-weight: bold; background-color: yellow; color: black;}
 
-.dropdownbutton{border:none;background-color:white;font-size: ; margin-left: ;}
-.dropdown:hover .insidedropdown {display: block;align:center;}/* when you hover, you will see the dropdown*/
-
+.dropdownbutton{border:none;background-color:white;font-size: ; margin-left: ;padding:0px;}
  
+.show-discover {display: block;}
+.button-discover{padding:0px;}
 
  @media only screen  and (min-width: 1300px){
 div.body_except_navi{margin-left:10%;margin-right:10%} ;div.banner{margin-left:0 cm;margin-right: 0cm;}}
@@ -42,18 +48,23 @@ body{background-color:#FFDB73;font-family: Arial;margin:0px}
 
 
 
-.flexbox{ display: flex; flex-wrap: wrap; gap:60px ;}
+.flexbox{     list-style-type: none;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;display: flex; flex-wrap: wrap; gap:60px ; align-items: center; flex-direction: row;overflow:visible;} /*careful with row cause just puit random*/
 
 
 
- .inner {  
-    flex: 1 0 20% /*Every element will use 20% of available space*/;
+ .inner {   
     background-color: #fff0e6;
-    padding: 15px;   cursor: pointer; margin: 0px ; ; px; width:100%; height:100%;transition: padding 0.2s;}
+    padding: 15px;   cursor: pointer; margin: 0px ; width:220px; height:200px;transition: padding 0.2s;}
 
- .inner:hover { background-color: orange; padding: 10px;}
+ .inner:hover { background-color: orange; }
  
- .img-news img{ width: 100%; height:100% ;margin-bottom: 10px;}
+ .img-news img{display:block; width:190px; height:130px ;margin-bottom: 10px;margin-left:auto ;margin-right:auto;transition: height 1s ;transition: width 1s }
+  .img-news img:hover  {display:block; width:208px; height:150px ;margin-bottom: 10px;margin-left:auto ;margin-right:auto;}
 
 
 /* animated banner*/
@@ -189,8 +200,8 @@ a.forEach(dot => {dot.style.display='inline-block';});}
  
     
 <div class='dropdown' style='float:right'>
-  <button style='border:non ' class='dropdownbutton'  ><a href="htmlwebsite-discover.html"><i class="fa fa-search" aria-hidden="true"></i> Discover <i class="fa fa-caret-down"></i></a></button>
-  <div class="insidedropdown">
+  <button onclick="drop()" style='border:non ' class='dropdownbutton '  > <a href="##"><i class="fa fa-search" aria-hidden="true"></i> Discover <i class="fa fa-caret-down"></i></a></button>
+  <div id="dropdown-discover" class="insidedropdown">
     <a href="#">BMI Calculator</a>
     <a href="#">BMI Calculator</a>
     <a href="#">BMI Calculator</a>
@@ -201,10 +212,11 @@ a.forEach(dot => {dot.style.display='inline-block';});}
 <div class='navi-left'>
 <span  onclick="openNav()" style='cursor:pointer'>hi life !</span>
 </div></div></div>
-
-
-<br><input type="text" placeholder="Search..">
-
+<script>
+ function drop() {
+  document.getElementById("dropdown-discover").classList.toggle("show-discover");
+}
+</script>
  
 </nav>
 
@@ -284,7 +296,7 @@ No health for your time tomorrow.      </div>
 https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown_filter
 <header id='1' class='header'> BLOGS</header>
 <div class='flexbox'>
- <div class="inner ">
+ <div class="inner">
 
            <div class="img-news"> <a target='_blank' href="https://www.cdc.gov/diabetes/basics/insulin-resistance.html"><img alt="Insulin Resistance and Diabetes" src="https://images.everydayhealth.com/images/diabetes-awareness-month-1440x810.jpg" ></a> </div>
      <p>Insulin Resistance and Diabetes <p>
@@ -292,7 +304,7 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown_filter
      
 
 
- <div class="inner ">
+ <div class="inner">
 
            <div class="img-news"> <a  target='_blank' href="https://www.cdc.gov/diabetes/basics/insulin-resistance.html"><img alt="Insulin Resistance and Diabetes" src="https://images.everydayhealth.com/images/diabetes-awareness-month-1440x810.jpg" ></a> </div>
          	 <p> Insulin Resistance and Diabetes <p>
@@ -331,29 +343,54 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown_filter
  
 <header id='2' class='header'> VIDEOS</header>
 
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+
+<input type="text" id="search" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+<ul class='flexbox' id='idname'>
+
+  	<div class='inner'>
+<li>
+   
+    <a href="https://www.cdc.gov/diabetes/basics/insulin-resistance.html"> <div class='img-news'><img src="https://images.everydayhealth.com/images/diabetes-awareness-month-1440x810.jpg" ></div>Insulin Resistance and Diabetes</a></li></div>
+       <div class='inner'>
+<li>
+    <div class='img-news'><img src="https://images.everydayhealth.com/images/diabetes-awareness-month-1440x810.jpg" ></div>
+    <a href="https://www.cdc.gov/diabetes/basics/insulin-resistance.html">a</a></li></div>
+       <div class='inner'>
+<li>
+    <div class='img-news'><img src="https://images.everydayhealth.com/images/diabetes-awareness-month-1440x810.jpg" ></div>
+    <a href="https://www.cdc.gov/diabetes/basics/insulin-resistance.html">b</a></li></div>
+       <div class='inner'>
+<li>
+    <div class='img-news'><img src="https://images.everydayhealth.com/images/diabetes-awareness-month-1440x810.jpg" ></div>
+    <a href="https://www.cdc.gov/diabetes/basics/insulin-resistance.html">c</a></li></div>
+       <div class='inner'>
+<li>
+    <div class='img-news'><img src="https://images.everydayhealth.com/images/diabetes-awareness-month-1440x810.jpg" ></div>
+    <a href="https://www.cdc.gov/diabetes/basics/insulin-resistance.html">d</a></li></div>
+       
  
-<div class="view">
-      <a href="#2">VIEW ALL VIDEOS</a> </div>
 
-<div class='flexbox'>
-<div class="inner ">
+</ul> 
 
-           <div class="img-news"> <a target='_blank' href="https://www.cdc.gov/diabetes/basics/insulin-resistance.html"><img alt="Insulin Resistance and Diabetes" src="https://images.everydayhealth.com/images/diabetes-awareness-month-1440x810.jpg" ></a> </div>
-         
-           <p> Insulin Resistance and Diabetes <p>
-</div>
-     
-
-
- <div class="inner ">
-
-           <div class="img-news"> <a  target='_blank' href="https://www.cdc.gov/diabetes/basics/insulin-resistance.html"><img alt="Insulin Resistance and Diabetes" src="https://images.everydayhealth.com/images/diabetes-awareness-month-1440x810.jpg" ></a> </div>
-         
-           <p> Insulin Resistance and Diabetes <p>
-</div>
-</div>
-
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("search");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("idname");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
  
 </div>
 </div>
