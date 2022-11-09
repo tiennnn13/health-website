@@ -7,17 +7,17 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">/*icons for navigational bar*/
 <style>
  /*responsive navigator*/
- .navi {z-index:7;list-style-type: none ;padding: 0px;background-color:white; position: fixed; top: 0; width:101.5%;margin-left:-1.5% ;height: 43px; }
- .navi-right a {font-size: 20px;font-weight: bold; color: black; ;padding: 10px; ;text-decoration: none;text-align: left;display: block;overflow:auto;}
- .navi-right a:hover {font-weight: bold; background-color: grey; color: red;}
+ .navi {z-index:7;list-style-type: none ;padding: 0px;background-color:black; position: fixed; top: 0; width:100%;margin-left:-1.5% ;height: 53px;padding-right:20px; }
+ .navi-right a {font-size: 20px;font-weight: bold; color: white; ;padding: 15px; ;text-decoration: none;text-align: left;display: block;overflow:auto;}
+ .navi-right a:hover {font-weight: bold;  color:#b9756a;  }
  .navi-right a{float:right;}
- .navi a.this-one-is-active { background-color: black;  color: white;}
-.navi-left{margin-left:20px;font:30px Arial; color:orange; font-family: Century Gothic;font-weight:bold}
+ .navi a.this-one-is-active { background-color: #b9756a;  color: white; height: px}
+.navi-left{margin-left:60px; font-family:"Fira Sans","Lucida Console";font-size: 40px; color:orange; font-family: Century Gothic;font-weight:bold}
 
 /*dropdown navigator*/
 .dropdown {position: relative; display: block;height:43px;}
 
-.insidedropdown {background-color: orange;display: none ;position: absolute; box-shadow: 10px 10px 16px 0px rgba(0,0,0,1); z-index: 3;width: px ;padding:0px;margin-top:-4px;}
+.insidedropdown {background-color:#f48f78;display: none ;position: absolute; box-shadow: 10px 10px 16px 0px rgba(0,0,0,1); z-index: 3;width: px ;padding:0px;margin-top:-4px;}
 .insidedropdown a {
   color: black;
   padding-right:px;
@@ -26,52 +26,64 @@
 }
 .insidedropdown a:hover {font-weight: bold; background-color: yellow; color: black;}
 
-.dropdownbutton{border:none;background-color:white;font-size: ; margin-left: ;padding:0px;}
+.dropdownbutton{border:none;background-color:black;font-size: ; margin-left: ;padding:0px;}
  
 .show-discover {display: block;}
 .button-discover{padding:0px;}
 
  @media only screen  and (min-width: 1300px){
-div.body_except_navi{margin-left:10%;margin-right:10%} ;div.banner{margin-left:0 cm;margin-right: 0cm;}}
+div.body_except_navi{margin-left:20%;margin-right:20%} ;div.banner{margin-left:10px;margin-right: 10px;}}
 
 
-body{background-color:#FFDB73;font-family: Arial;margin:0px}
+body{ cursor: context-menu;background-color:#fff3f1fa;font-family: "Proxima Nova","Proxima Nova Fallback",sans-serif;;margin:20px}
 
 .body_except_navi{margin-left:0px;margin-right:0px;margin-top:0px;}
 
-.header {margin-bottom:30px;margin-left: %;margin-right: %;text-align:center; padding-top:10px; padding-bottom:10px; font-family: sans-serif; font-size:55px; font-weight:bold; color: #fff;background-color:orange;}
+.flex-viewall{     list-style-type: none; margin-block-start: 0px;margin-block-end: 0px;margin-inline-start: 0px;margin-inline-end: 0px; padding-inline-start: 0px;
+display: flex;align-items: center;border-bottom: solid 2px #dcdbdb;justify-content: space-between; ;margin-bottom:40px; }
 
+.header {  font-family: "Proxima Nova","Proxima Nova Fallback",sans-serif;  font-size:30px;
+ font-weight:bold; color:#f48f78;  ;justify-content: space-between;}
 
-.view a { color: orange; font-family: sans-serif; font-size: 30px; transition: linear; font-weight: bold;padding-bottom: 30px;text-align: center;}
-.view a:hover {    color:black;}
+ .viewall{  font-family: "Proxima Nova","Proxima Nova Fallback",sans-serif;  font-size:15px;border-bottom: solid 0.1px #64c7c9;
+ font-weight:bold; color:#64c7c9;padding-bottom:1px; margin-bottom:10px;  cursor: pointer;}
 
-
-
-
-.flexbox{     list-style-type: none;
-    margin-block-start: 0px;
-    margin-block-end: 0px;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 0px;display: flex; flex-wrap: wrap; gap:60px ; align-items: center; flex-direction: row;overflow:visible;} /*careful with row cause just puit random*/
+.view a { color: #fd8177; font-family: sans-serif; font-size: 30px; transition: linear; font-weight: bold;padding-bottom: 30px;text-align: center;}
+.view a:hover {    color:#990000;}
 
 
 
- .inner {   
-    background-color: #fff0e6;
-    padding: 15px;   cursor: pointer; margin: 0px ; width:220px; height:200px;transition: padding 0.2s;}
 
- .inner:hover { background-color: orange; }
+.flexbox{  justify-content: space-between;   list-style-type: none; margin-block-start: 0px;margin-block-end: 0px;margin-inline-start: 0px; margin-inline-end: 0px;margin-left: ;margin-right: ;padding-inline-start: 0px;
+display: flex; flex-wrap: wrap;  ; align-items: center; flex-direction: row;overflow:visible;} /*careful with row cause just puit random*/
+
+ .inner {  
+    background-color: white; border:solid 1px #dcdbdb;
+    padding:  px;  width:300px; height:500px;transition: padding 0.2s;margin-bottom:50px;}
+
+.inner:hover { background-color: ;  }
+
+.topic{text-align:center;font-family: "Century Gothic", ,sans-serif;  font-size:17px;text-decoration: underline;
+ font-weight:bold; color:#64c7c9;padding-bottom: ; margin-bottom: ; cursor: pointer; margin-top:10px;margin-bottom:10px; }
+
+.name{text-align:center;font-family: "Century Gothic", ,sans-serif;  font-size:25px; ;
+ font-weight:bold; color:black;padding-bottom: ; margin-bottom: 15px;}
+
+.describe{text-align:center;font-family: "Century Gothic", ,sans-serif;  font-size:15px; ;
+ font-weight: ; color:black;padding-bottom: ; margin-bottom: ;   }
+
+.readmore{ text-align:center;font-family: "Century Gothic", ,sans-serif;  font-size:17px;text-decoration: underline;
+ font-weight:bold; color:#64c7c9;padding-bottom: ; margin-bottom: ; cursor: pointer; margin-top:10px;margin-bottom:10px; }
  
- .img-news img{display:block; width:190px; height:130px ;margin-bottom: 10px;margin-left:auto ;margin-right:auto;transition: height 1s ;transition: width 1s }
-  .img-news img:hover  {display:block; width:208px; height:150px ;margin-bottom: 10px;margin-left:auto ;margin-right:auto;}
+ .img-news img{display:block; width:100%; height:200px;  ;margin-bottom:  px;   }
+   
 
 
 /* animated banner*/
-.banner {overflow: hidden; background: white ;margin-left: %;margin-right:%; width: 100%;left:0%}
+.banner {overflow: hidden; background:white ;margin-left: %;margin-right:%; width: 100%;left:0%}
 .banner-move { animation: name-of-animation linear/*same speed*/ 20s infinite; }
 .banner-move{ display: flex ;}
-.banner-move:hover { color:orange}
+.banner-move:hover { color:white}
 .hitem { margin-top:10px;margin-bottom:10px; flex-shrink: 0 /*lay all of the items out in a long horizontal row*/ ; width: 100%; ; box-sizing: border-box;  padding: 30 px;  text-align: center;}
  
  
@@ -106,32 +118,32 @@ body{background-color:#FFDB73;font-family: Arial;margin:0px}
 }
 .hiddentext:hover{color: #f1f1f1}
 
-.welcometohilife:hover{color:orange}
+.welcometohilife:hover{color:#fd8177}
 
 
 /* slideshow  https://linuxhint.com/create-image-slider-using-javascript/  */
-.imageSlides {display: none}
+.imageSlides {display: none;position:relative;margin-top:5%;}
  
-.image_of_the_slideshow  img{ display: block;  background-position: center; background-repeat: no-repeat;
-     width: 100%;height:400px; 
+.image_of_the_slideshow  img{position:relative; display: block;  background-position: center; background-repeat: no-repeat;
+     width: 60%;height:400px;
       }
  
-  
-.theslideshow {margin-left:  ; margin-right: %; margin-top:%;
-  position: relative;
-  margin-left:  ;background-position: center;}
  
+.theslideshow {margin-left:  ; margin-right: %; margin-top:%;
+  position: relative;display:block
+  margin-left:  ;background-position: center;}
+
+.text-slideshow{position: absolute;;top:20%;left:60%;}
  
 .slider-btn{
   cursor: pointer;
   position: absolute;
   top: 50%;
-  
   padding: 8px 16px;
   margin-top: -22px;
   color: rgb(0, 0, 0);
   font-weight: bold;
-  font-size: 18px; 
+  font-size: 18px;
   border-radius: 0 3px 3px 0;
   user-select: none;
   background-color: rgba(255, 255, 255, 0.5);
@@ -139,20 +151,12 @@ body{background-color:#FFDB73;font-family: Arial;margin:0px}
 }
  
  
-.go-back { left: 1%;} 
-.go-forth{right: 1%;}
+.go-back { left: 1%;}
+.go-forth{right: 41%;}
  
 .go-back:hover,.go-forth:hover {  color: rgb(255, 253, 253);
   background-color: rgba(0, 0, 0, 0.8);
 }
-
-
-
-
-
-
-
-
 
 
   .dot {  cursor: pointer; height: 16px; width: 16px; margin: 6px; background-color: grey; border-radius: 50%;
@@ -168,11 +172,11 @@ body{background-color:#FFDB73;font-family: Arial;margin:0px}
 </style>
 </head>
 
-<body > 
+<body >
 <!--full_screen_navigation--!>
 <div id="full_screen_navigation" class="hidden">
     <a   class='hiddentext' style=' position: absolute;top: 20px;right: 45px; font-size: 60px; cursor:pointer;' onclick="closeNav()">&times;</a>
-  
+ 
 <div class="hidden-content">
      <a  class='welcometohilife' href="#"> Welcome to Hi life!</a>
   </div></div>
@@ -195,10 +199,10 @@ a.forEach(dot => {dot.style.display='inline-block';});}
 </script>
 <div class='navi'>
 <div class='navi-right'>
-   <a href="#about"> <i class="fa fa-user-o" aria-hidden="true"></i> About</a> 
+   <a href="#about"> <i class="fa fa-user-o" aria-hidden="true"></i> About</a>
     <a href="htmlwebsite-knowledge.html"><i class="fa fa-book" aria-hidden="true"></i> Knowledge</a>  
  
-    
+   
 <div class='dropdown' style='float:right'>
   <button onclick="drop()" style='border:non ' class='dropdownbutton '  > <a href="##"><i class="fa fa-search" aria-hidden="true"></i> Discover <i class="fa fa-caret-down"></i></a></button>
   <div id="dropdown-discover" class="insidedropdown">
@@ -207,8 +211,8 @@ a.forEach(dot => {dot.style.display='inline-block';});}
     <a href="#">BMI Calculator</a>
   </div>
 </div>
-<a href="htmlwebsite-search.html"><i class="fa fa-search" aria-hidden="true"></i> Search </a> 
-   <a class='this-one-is-active' href="#home"><i class="fa fa-fw fa-home"></i> Home</a> </div> 
+<a href="htmlwebsite-search.html"><i class="fa fa-search" aria-hidden="true"></i> Search </a>
+   <a class='this-one-is-active' href="#home"><i class="fa fa-fw fa-home"></i> Home</a> </div>
 <div class='navi-left'>
 <span  onclick="openNav()" style='cursor:pointer'>hi life !</span>
 </div></div></div>
@@ -222,20 +226,20 @@ a.forEach(dot => {dot.style.display='inline-block';});}
 
 
 <div class='body_except_navi'>
-<nav> 
+<nav>
 <div class='image_of_the_slideshow '>
 
 <div class=" theslideshow">
         <div class="imageSlides ">
-            <img src="https://static.vecteezy.com/system/resources/previews/001/226/748/original/colorful-sunset-sky-free-photo.jpg">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/conair-ghk-index-1553611008.jpg"> <p class='text-slideshow'>what do you need to know about obesity</p>
         </div>
         <div class="imageSlides ">
-            <img src="https://4kwallpapers.com/images/wallpapers/sunset-tropical-trees-silhouette-dawn-warm-3840x2160-2548.jpg">
+            <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimg1.cookinglight.timeinc.net%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F4_3_horizontal_-_1200x900%2Fpublic%2F1578698236%2FBalanced%20Diet.jpg%3Fitok%3DBma9DcZ_">
         </div>
         <div class=" imageSlides ">
-            <img src="https://images.squarespace-cdn.com/content/v1/5a7a09591f318d0b3c459fd8/1611357464510-4FL3EDOC7T4N7W3X1E1I/Diabetes-symptoms.jpg">
+            <img src="https://images.everydayhealth.com/images/consisten-exercise-helps-anxiety-and-stress-1440x810.jpg">
         </div>
- 	<div class="imageSlides ">
+  <div class="imageSlides ">
             <img src="https://static.vecteezy.com/system/resources/previews/001/226/748/original/colorful-sunset-sky-free-photo.jpg">
         </div>
         <a class="slider-btn go-back" onclick="setSlides(-1)"><</a>
@@ -245,10 +249,10 @@ a.forEach(dot => {dot.style.display='inline-block';});}
 
 
 <div   class="dot_position">
-  <div   id="dot_dis" class="dot"  onclick="current_slide_by_dot(1)"></div> 
-  <div  id="dot_dis"  class="dot"  onclick="current_slide_by_dot(2)"></div> 
-  <div  id="dot_dis" class="dot"  onclick="current_slide_by_dot(3)"></div> 
-<span class="dot" onclick="current_slide_by_dot(4)"></div> 
+  <div   id="dot_dis" class="dot"  onclick="current_slide_by_dot(1)"></div>
+  <div  id="dot_dis"  class="dot"  onclick="current_slide_by_dot(2)"></div>
+  <div  id="dot_dis" class="dot"  onclick="current_slide_by_dot(3)"></div>
+<span class="dot" onclick="current_slide_by_dot(4)"></div>
 </div>
 
 
@@ -294,7 +298,63 @@ No health for your time tomorrow.      </div>
 </div></div>
 
 https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown_filter
-<header id='1' class='header'> BLOGS</header>
+
+https://www.careercontessa.com/
+
+
+https://www.createcultivate.com/
+
+<div class='flex-viewall'>
+<div class='header'>  BLOGS </div>
+<div class='viewall'> VIEW ALL <i class="fa fa-arrow-circle-o-right" aria-hidden="true"  ></i></div>
+</div>
+
+
+<div class='flexbox'>
+ <div class="inner">
+
+           <div class="img-news"> <img alt="Insulin Resistance and Diabetes" src="https://flushinghospital.org/newsletter/wp-content/uploads/2015/01/food-300x200.jpg" > </div>
+     <div class='topic'>DIET </div>
+ <div class='name'>How Foods May Affect Our Sleep</div>
+ <div class='describe'>A growing body of research suggests that the foods you eat can affect how well you sleep, and your sleep patterns can affect your dietary choices. </div>
+<p style='text-align:center'><span class='readmore'> <a target='_blank' href="https://www.nytimes.com/2020/12/10/well/eat/sleep-foods-diet.html" style='color: currentColor;
+  text-decoration: none;'>Read more</a></span><span style='font-family: "Century Gothic" ,sans-serif;  font-size:15px; font-weight:bold; color:#64c7c9;  cursor: pointer'> ></span></p>
+</div>
+     
+
+ <div class="inner">
+
+           <div class="img-news"> <img alt="Insulin Resistance and Diabetes" src="https://flushinghospital.org/newsletter/wp-content/uploads/2015/01/food-300x200.jpg" > </div>
+     <div class='topic'>DIET </div>
+ <div class='name'>How Foods May Affect Our Sleep</div>
+ <div class='describe'>A growing body of research suggests that the foods you eat can affect how well you sleep, and your sleep patterns can affect your dietary choices. </div>
+<p style='text-align:center'><span class='readmore'> <a target='_blank' href="https://www.nytimes.com/2020/12/10/well/eat/sleep-foods-diet.html" style='color: currentColor;
+  text-decoration: none;'>Read more</a></span><span style='font-family: "Century Gothic" ,sans-serif;  font-size:15px; font-weight:bold; color:#64c7c9;  cursor: pointer'> ></span></p>
+</div>
+
+
+
+      <div class="inner">
+
+           <div class="img-news"> <img alt="Insulin Resistance and Diabetes" src="https://flushinghospital.org/newsletter/wp-content/uploads/2015/01/food-300x200.jpg" > </div>
+     <div class='topic'>DIET </div>
+ <div class='name'>How Foods May Affect Our Sleep</div>
+ <div class='describe'>A growing body of research suggests that the foods you eat can affect how well you sleep, and your sleep patterns can affect your dietary choices. </div>
+<p style='text-align:center'><span class='readmore'> <a target='_blank' href="https://www.nytimes.com/2020/12/10/well/eat/sleep-foods-diet.html" style='color: currentColor;
+  text-decoration: none;'>Read more</a></span><span style='font-family: "Century Gothic" ,sans-serif;  font-size:15px; font-weight:bold; color:#64c7c9;  cursor: pointer'> ></span></p>
+</div>
+</div>
+ 
+ 
+
+
+
+<div class='flex-viewall'>
+<div class='header'>  VIDEOS </div>
+<div class='viewall'> VIEW ALL <i class="fa fa-arrow-circle-o-right" aria-hidden="true"  ></i></div>
+</div>
+
+ 
 <div class='flexbox'>
  <div class="inner">
 
@@ -307,93 +367,18 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown_filter
  <div class="inner">
 
            <div class="img-news"> <a  target='_blank' href="https://www.cdc.gov/diabetes/basics/insulin-resistance.html"><img alt="Insulin Resistance and Diabetes" src="https://images.everydayhealth.com/images/diabetes-awareness-month-1440x810.jpg" ></a> </div>
-         	 <p> Insulin Resistance and Diabetes <p>
+          <p> Insulin Resistance and Diabetes <p>
 </div>
      
 <div class="inner ">
 
            <div class="img-news"> <a target='_blank' href="https://www.cdc.gov/diabetes/basics/insulin-resistance.html"><img alt="Insulin Resistance and Diabetes" src="https://images.everydayhealth.com/images/diabetes-awareness-month-1440x810.jpg"></a> </div>
-         	<p> Insulin Resistance and Diabetes <p>
+          <p> Insulin Resistance and Diabetes <p>
 </div>
-<div class="inner ">
-
-           <div class="img-news"> <a target='_blank' href="https://www.cdc.gov/diabetes/basics/insulin-resistance.html"><img alt="Insulin Resistance and Diabetes" src="https://images.everydayhealth.com/images/diabetes-awareness-month-1440x810.jpg"></a> </div>
-         
-           <p> Insulin Resistance and Diabetes <p>
-</div>
-
-
- <div class="inner ">
-
-           <div class="img-news"> <a target='_blank' href="https://www.cdc.gov/diabetes/basics/insulin-resistance.html"><img alt="Insulin Resistance and Diabetes" src="https://images.everydayhealth.com/images/diabetes-awareness-month-1440x810.jpg"></a> </div>
-         
-           <p> Insulin Resistance and Diabetes <p>
-</div>
-</div>
-
-
-<div class="view">
-      <a href="#1">VIEW ALL BLOGS</a> </div>
- 
-
-
-
-
-<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
- 
-<header id='2' class='header'> VIDEOS</header>
-
-
-<input type="text" id="search" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
-
-<ul class='flexbox' id='idname'>
-
-  	<div class='inner'>
-<li>
-   
-    <a href="https://www.cdc.gov/diabetes/basics/insulin-resistance.html"> <div class='img-news'><img src="https://images.everydayhealth.com/images/diabetes-awareness-month-1440x810.jpg" ></div>Insulin Resistance and Diabetes</a></li></div>
-       <div class='inner'>
-<li>
-    <div class='img-news'><img src="https://images.everydayhealth.com/images/diabetes-awareness-month-1440x810.jpg" ></div>
-    <a href="https://www.cdc.gov/diabetes/basics/insulin-resistance.html">a</a></li></div>
-       <div class='inner'>
-<li>
-    <div class='img-news'><img src="https://images.everydayhealth.com/images/diabetes-awareness-month-1440x810.jpg" ></div>
-    <a href="https://www.cdc.gov/diabetes/basics/insulin-resistance.html">b</a></li></div>
-       <div class='inner'>
-<li>
-    <div class='img-news'><img src="https://images.everydayhealth.com/images/diabetes-awareness-month-1440x810.jpg" ></div>
-    <a href="https://www.cdc.gov/diabetes/basics/insulin-resistance.html">c</a></li></div>
-       <div class='inner'>
-<li>
-    <div class='img-news'><img src="https://images.everydayhealth.com/images/diabetes-awareness-month-1440x810.jpg" ></div>
-    <a href="https://www.cdc.gov/diabetes/basics/insulin-resistance.html">d</a></li></div>
-       
- 
-
-</ul> 
-
-<script>
-function myFunction() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById("search");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("idname");
-    li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
-}
-</script>
  
 </div>
-</div>
+ 
+ 
 
 </body>
 </html>
