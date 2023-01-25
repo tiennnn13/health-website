@@ -187,7 +187,63 @@ display: flex;align-items: center;border-bottom: solid 2px #dcdbdb;justify-conte
 .active, .dot:hover {
   background-color: white;}
  .img1{ position:absolute; right: 0% ; top:0px;  }
- .img2{ position:absolute; right: 0% ; bottom:0px;}
+ .img2{ position:absolute; right: 0% ; bottom:-3.5px;}
+
+
+ .calories-counter-button{cursor: pointer;position:absolute; text-align: center;right :0%; top: 70%; left: 50%;
+      margin-right: -50%;transform: translate(-50%, -50%);
+  padding: 5px ;
+  border-radius: 3.75rem;
+  font-size: 1.2vw;
+  transition-duration: 0.4s;
+   width:10vw;
+   font-weight: bold;
+  border: 1px solid #01278000;
+  background-image: linear-gradient(-180deg, #fddec5 0%, #f8d94e 100%);
+  box-shadow: 0 1rem 0.5rem 0 rgba(175, 171, 171, 0.5),
+             
+}
+
+.calories-counter-button:hover{cursor: pointer;position:absolute; text-align: center;right :0%; top: 70%; left: 50%;
+      margin-right: -50%;transform: translate(-50%, -50%);
+  padding: 5px ;
+  border-radius: 3.75rem;
+  font-size: 1.25vw;
+   width:10.25vw;
+   font-weight: bold;
+  border: 1px solid #01278000;
+  background-image: linear-gradient(-180deg, #fddec5 0%, #e9913f 100%);
+  box-shadow: 0 1rem 0.5rem 0 rgba(175, 171, 171, 0.5),}
+
+  .bmi-calculator-button{cursor: pointer;position:absolute; text-align: center;right :0%; top: 73%; left: 50%;
+      margin-right: -50%;transform: translate(-50%, -50%);
+  padding: 5px ;
+  border-radius: 3.75rem;
+  font-size: 1.2vw;
+  transition-duration: 0.4s;
+   width:10vw;
+   font-weight: bold;
+  border: 1px solid #01278000;
+  background-image: linear-gradient(-180deg, #e0fdc5 0%, #23e273 100%);
+  box-shadow: 0 1rem 0.5rem 0 rgba(175, 171, 171, 0.5),
+             
+}
+
+.bmi-calculator-button:hover{cursor: pointer;position:absolute; text-align: center;right :0%; top: 73%; left: 50%;
+      margin-right: -50%;transform: translate(-50%, -50%);
+  padding: 5px ;
+  border-radius: 3.75rem;
+  font-size: 1.35vw;
+   
+   width:10.25vw;
+   font-weight: bold;
+  
+  border: 1px solid #01278000;
+  background-image: linear-gradient(-180deg, #c5fdef 0%, #3fb1fd 100%);
+  box-shadow:  1rem 0.5rem 0 rgba(175, 171, 171, 0.5),
+             
+}
+  
   
 
   @media   screen  and (min-width: 1900px){
@@ -394,21 +450,16 @@ a.forEach(dot => {dot.style.display='inline-block';});}
  <div class='theslideshow'>
 
   <div class='img1'> 
-    <a target='_blank' href="calories-counter.html" style='color: currentColor;text-decoration: none;position :; ' >
+    
       <img src=" https://domf5oio6qrcr.cloudfront.net/medialibrary/6204/a0e3204e-81fb-44ad-b22e-111a2b885e55.jpg" height='180px' width='300px'  >  
-      <p style="position:absolute; text-align: center;right :0%; top: 60%;    
-      left: 50%;
-      margin-right: -50%;
-      transform: translate(-50%, -50%)">Calories Counter </p> </a> </div>
+      <a target='_blank' href="calories-counter.html" style="color: currentColor;text-decoration: none;position :; "  ><p class="calories-counter-button">Calories Counter </p> </a> </div>
 
    
 <div class='img2'> 
-  <a target='_blank' href="bmi-calculator.html" style='color: currentColor;text-decoration: none;position :; ' >
+ 
     <img src="https://t3.ftcdn.net/jpg/02/23/57/42/360_F_223574261_LmzlzkLtjR0cxcDNvkmr2xHfMU69CheO.jpg" height='180px' width='300px' style="object-fit: cover">
-    <p style="position:absolute; text-align: center;right :0%; top: 60%;    
-      left: 50%;
-      margin-right: -50%;
-      transform: translate(-50%, -50%)"> </p> </a> </div>
+    <a target='_blank' href="bmi-calculator.html" style='color: currentColor;text-decoration: none;position :; ' >
+    <p class="bmi-calculator-button">BMI Calculator </p> </a> </div>
  
  <div class='imgstyle'>
        <div   class="dot_position">
@@ -419,29 +470,31 @@ a.forEach(dot => {dot.style.display='inline-block';});}
        
       </div>
   
- 
+
          <div class="imageSlides ">
-          <a target='_blank' href="https://my.clevelandclinic.org/health/diseases/11209-weight-control-and-obesity" style='color: currentColor;
-          text-decoration: none;'> 
+          
           <img src="https://blog.chsbuffalo.org/wp-content/uploads/2019/01/bad-diet-fastfood.jpg" class='imgstyle'>
             
-              <p style="position: absolute;;top:75%; right:50% ;background-color:white;color: black; 
-              display:block;width:80% ;padding:20px;font-weight: 700; font-size: 25px;
-    ; font-family: Proxima Nova Condensed,Proxima Nova Condensed Fallback,sans-serif;
-    background-color:rgba(255,255,255,0.95);border-radius: 5px;
-              left: 50%; margin-right: -50%; transform: translate(-50%, -50%); text-align: center; ; " 
-              >Obesity: A Pressing Global Epidemic </p>
-            </a></div>
+            <p style="position: absolute;;background-color:white;color: black; 
+              display:block;width:80% ;padding:20px;font-weight: 700; font-size: 25px;font-family: Proxima Nova Condensed,Proxima Nova Condensed Fallback,sans-serif;
+    background-color:rgba(255,255,255,0.95);border-radius: 5px;cursor: pointer;
+              left: 50%; margin-right: -50%; transform: translate(-50%, -50%); text-align: center;top:75%; right:50% ;z-index: 2; " >
+               <a target='_blank' href="https://my.clevelandclinic.org/health/diseases/11209-weight-control-and-obesity" style='color: currentColor;
+              text-decoration: none;z-index: index 5;;;'> Obesity: A Pressing Global Epidemic  </a> </p>
+            </div> 
          
          <div class="imageSlides ">
-          <a target='_blank' href="https://my.clevelandclinic.org/health/diseases/11209-weight-control-and-obesity" style='color: currentColor;
-          text-decoration: none;'> 
-          <img class='imgstyle' src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimg1.cookinglight.timeinc.net%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F4_3_horizontal_-_1200x900%2Fpublic%2F1578698236%2FBalanced%20Diet.jpg%3Fitok%3DBma9DcZ_">
-         <p style="position: absolute;;top:20%; right:50% ;background-color:rgba(255,255,255,0.95);border-radius: 5px;;color: black; 
-         left: 50%; margin-right: -50%; transform: translate(-50%, -50%); ">Which Diet Suit You Best?</p> 
-        </a>
-        </div>
-         
+          
+          <img class='imgstyle' src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimg1.cookinglight.timeinc.net%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F4_3_horizontal_-_1200x900%2Fpublic%2F1578698236%2FBalanced%20Diet.jpg%3Fitok%3DBma9DcZ_" >
+           
+        <p style="position: absolute;;background-color:white;color: black; 
+        display:block;width:80% ;padding:20px;font-weight: 700; font-size: 25px;font-family: Proxima Nova Condensed,Proxima Nova Condensed Fallback,sans-serif;
+background-color:rgba(255,255,255,0.95);border-radius: 5px;cursor: pointer;
+        left: 50%; margin-right: -50%; transform: translate(-50%, -50%); text-align: center;top:75%; right:50% ;z-index: 2; " >
+         <a target='_blank' href="calories-counter.html" style='color: currentColor;
+        text-decoration: none;z-index: index 5;;;'> Which Diet Suit You Best?  </a> </p>
+      </div> 
+
          <div class=" imageSlides ">
           <a target='_blank' href="https://my.clevelandclinic.org/health/diseases/11209-weight-control-and-obesity" style='color: currentColor;
           text-decoration: none;'> 
@@ -505,13 +558,7 @@ No health for your time tomorrow.      </div>
   <div class="hitem">1234 4332 4566 4443 44 3 34 3444 434 34454 4444 .</div>
 </div></div>
 
-https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown_filter
-
-https://www.careercontessa.com/
-
-
-https://www.createcultivate.com/
-
+ 
 <br><br><br><br><br><br><br><br><br><br>
 <div class='flex-viewall'>
   <div class='header'>  EXPLORE MORE </div>
