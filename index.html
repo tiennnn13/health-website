@@ -10,10 +10,10 @@
 <style>
  /*responsive navigator*/
  .navi {z-index:7;list-style-type: none ;padding: 0px;background-color:black; position: fixed; top: 0; width:100%;margin-left: 0% ;height: 53px;padding-right:20px; }
- .navi-right a {font-size: 20px;font-weight: bold; color: white; ;padding: 15px; ;text-decoration: none;text-align: left;display: block;overflow:auto;}
- .navi-right a:hover {font-weight: bold;  color:#f97a6c;  }
+ .navi-right a {font-size: 20px;font-weight:700; color: white; ;padding: 15px; ;text-decoration: none;text-align: left;display: block;overflow:auto;background-color: #000000;}
+ .navi-right a:hover {font-weight: 700;  color:#ff603b; border-bottom: solid 1px #ff603b ; }
  .navi-right a{float:right;}
- .navi a.this-one-is-active { background-color: #f97a6c;  color: white; height: px}
+ .navi a.this-one-is-active { background-color: #ff603b;  color: white; height: px}
 .navi-left{margin-left:60px; font-family:"Fira Sans","Lucida Console";font-size: 40px; color:orange; font-family: Century Gothic;font-weight:bold}
 
 /*dropdown navigator*/
@@ -45,15 +45,15 @@ body{ cursor: context-menu;background-color:#fff3f1fa;font-family: "Proxima Nova
 
 /* header*/
 .flex-viewall{     list-style-type: none; margin-block-start: 0px;margin-block-end: 0px;margin-inline-start: 0px;margin-inline-end: 0px; padding-inline-start: 0px;
-display: flex;align-items: center;border-bottom: solid 2px #dcdbdb;justify-content: space-between; ;margin-bottom:40px; }
+display: flex;align-items: center;border-bottom: solid 2px #dcdbdb;justify-content: space-between; ;margin-bottom:; }
 
 .header {  font-family: "Proxima Nova","Proxima Nova Fallback",sans-serif;  font-size:30px;
- font-weight:bold; color:#f48f78;  ;justify-content: space-between;}
+ font-weight:bold; color:#ff603b;  ;justify-content: space-between;}
 
- .viewall{  font-family: "Proxima Nova","Proxima Nova Fallback",sans-serif;  font-size:15px;border-bottom: solid 0.1px #64c7c9;
- font-weight:bold; color:#64c7c9;padding-bottom:1px; margin-bottom:10px;  cursor: pointer;}
+ .viewall{font-weight: 700; font-family: "Proxima Nova","Proxima Nova Fallback",sans-serif;  font-size:15px;border-bottom: solid 0.1px #51bfc1;
+ ; color:#51bfc1;padding-bottom:1px; margin-bottom:10px;  cursor: pointer;}
 
-.view a { color: #fd8177; font-family: sans-serif; font-size: 30px; transition: linear; font-weight: bold;padding-bottom: 30px;text-align: center;}
+.view a { color: #ff603b; font-family: sans-serif; font-size: 30px; transition: linear; font-weight: bold;padding-bottom: 30px;text-align: center;}
 .view a:hover {    color:#990000;}
 
 
@@ -61,14 +61,14 @@ display: flex;align-items: center;border-bottom: solid 2px #dcdbdb;justify-conte
 
 
 /* section */
-.flex-option {justify-content:  space-between;
+.flex-option {justify-content:  space-between; 
   display: flex; flex-wrap: nowrap; gap: auto ; align-items: center; flex-direction: row;overflow: ;  overflow-x:  ; }
-  .option-inside{}
-
+.circle{cursor: pointer;padding-top:60px;padding-bottom:60px;}
+.circle:hover{color: rgb(238, 36, 154);  filter: brightness(115%)}
 .circle img{border-radius:100%;flex: 20% 0 auto; display:block;position:  ;width:150px;height:150px;}
 
-.text-option{ font-family: Lucida Sans Unicode;position:relative; text-align: center;margin-top: 10px; cursor: pointer;margin-top:;letter-spacing:;}
-.text-option:hover{color: pink; text-decoration: underline;}
+.text-option{font-weight: 700; font-family: Lucida Sans Unicode;position:relative; text-align: center;margin-top: 10px; ;margin-top:;letter-spacing:;}
+
    
 
 
@@ -310,14 +310,16 @@ display: flex;align-items: center;border-bottom: solid 2px #dcdbdb;justify-conte
 
  /* what to read */ 
   .wrapper1 { background-color: ;
-    display: grid;margin-top:70px;margin-bottom:70px;margin-right:50px;margin-left:50px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
-    grid-template-rows:   100px 100px 100px 100px;
+    display: grid;margin-top:100px;margin-bottom:100px;margin-right:50px;margin-left:50px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr  ;
+    grid-template-rows:   100px 100px 25px 100px 100px 25px;
     grid-template-areas: 
-    " inner4 inner4 inner4 inner-main inner-main inner-main inner-main  inner-main  inner-main "
-    " inner4 inner4 inner4 inner-main inner-main inner-main inner-main  inner-main  inner-main "
+    " inner5 inner5 inner5 inner-main inner-main inner-main inner-main  inner-main  inner-main "
+    " inner5 inner5 inner5 inner-main inner-main inner-main inner-main  inner-main  inner-main "
+    ". . . . . . . . ."
     " inner4 inner4 inner4 inner2 inner2 inner2 inner3 inner3 inner3"
-    "inner4 inner4  inner4 inner2 inner2 inner2 inner3 inner3 inner3";
+    "inner4 inner4  inner4 inner2 inner2 inner2 inner3 inner3 inner3"
+    ". . . . . . . . .";
   grid-gap: 3vmin;}
 
 .inner1{grid-area: inner1;background-color: white;  position:relative; ;
@@ -334,6 +336,7 @@ display: flex;align-items: center;border-bottom: solid 2px #dcdbdb;justify-conte
 
     .inner5{grid-area: inner5; background-color: white;   position:relative;
     padding:  px;  width:  px;  ;transition: padding 0.2s;border-radius:30px;}
+    .inner5:hover(color:pink; )
     
 .what-to-read{grid-area:what-to-read}
 
@@ -342,8 +345,7 @@ display: flex;align-items: center;border-bottom: solid 2px #dcdbdb;justify-conte
 display: flex; flex-wrap: wrap;  ; align-items: center; flex-direction: row;overflow:visible;}
 careful with row cause just puit random*/ 
 
- .inner {  
-    background-color: white; border:solid 1px #dcdbdb;
+ .inner {   background-color: white; border:solid 1px #dcdbdb;
     padding:  px;  width: 300px; height:500px;transition: padding 0.2s; }
 
 .inner:hover { background-color: ;  }
@@ -351,13 +353,21 @@ careful with row cause just puit random*/
 .topic{text-align:center;font-family: "Century Gothic", ,sans-serif;  font-size:17px;text-decoration: underline;
  font-weight:bold ;color:#64c7c9 ;padding-bottom: ; margin-bottom: ; cursor: pointer; margin-top:10px;margin-bottom:10px; }
 
- .topic-inner{position:absolute;font-family: "Century Gothic", ,sans-serif;  font-size:17px;text-decoration: underline;
+ .topic-new{position:absolute;font-family: "Century Gothic", ,sans-serif;  font-size:17px;text-decoration: underline;
  font-weight:bold ;color:#64c7c9 ;padding-bottom: ; margin-bottom: ; cursor: pointer; margin-top:10px;margin-bottom:10px; }
 
 .name{text-align:center;font-family: "Century Gothic", ,sans-serif;  font-size:25px; ;
  font-weight:bold; color:black;padding-bottom: ; margin-bottom: 15px;}
 
- .name-inner{text-align:center;  font-size:20px; ;
+ 
+.name-inner{position: absolute;color: black; 
+  display:block;width:100%;font-weight: 700; font-size: 20px;font-family: Proxima Nova Condensed,Proxima Nova Condensed Fallback,sans-serif;
+background-color:;border-radius: 5px;cursor: pointer;top:103%;
+ top:; text-align: center; ;z-index: 2; }
+
+ .name-inner:hover{color: rgb(10, 55, 255)  ;}
+ 
+ .name-new{text-align:center;  font-size:20px; ;
  font-weight:bold; color:black;padding-bottom: ; margin-bottom: px;position:absolute;  left:10%;top:0%;;font-family: "Century Gothic", ,sans-serif;z-index:2;}
 
 .describe{text-align:center;font-family: "Century Gothic", ,sans-serif;  font-size:15px; ;
@@ -369,7 +379,7 @@ careful with row cause just puit random*/
            line-clamp: 2; 
    -webkit-box-orient: vertical;}
 
-   .describe-inner{text-align:center;font-family: "Century Gothic", ,sans-serif;  font-size:10px; ;
+   .describe-new{text-align:center;font-family: "Century Gothic", ,sans-serif;  font-size:10px; ;
  font-weight: ; color:black ;padding-bottom: ; margin-bottom: ; position:absolute; left:10%;top:0%;
  overflow: hidden;
    text-overflow: ellipsis;
@@ -381,11 +391,37 @@ careful with row cause just puit random*/
 .readmore{ text-align:center;font-family: "Century Gothic", ,sans-serif;  font-size:17px;text-decoration: underline;
  font-weight:bold; color:#64c7c9 ;
  padding-bottom: ; margin-bottom: ; cursor: pointer; margin-top:10px;margin-bottom:10px; }
-
-  
  
- .img-news {display:block; width: 200px  ; height: 200px; top: ;  ; margin-bottom:  px; position:relative;  }
+ 
+ .img-news {position: ;width: 100% ; height: 50%;; object-fit: fill  ;margin-top: ; display:block ;  }
+ .img-news-new img{position:absolute ;width: 100% ; height: 40%;; object-fit: fill  ;margin-top: ; display:block ;}
  .img-news-inner img{position:absolute ;width: 100% ; height: 100%;; object-fit: fill  ;margin-top: ; display:block ;border-radius:30px;}
+
+
+ .wrapper2 { background-color: ;
+    display: grid;margin-top:100px;margin-bottom:100px;margin-right:50px;margin-left:50px;
+    grid-template-columns: 1fr 1fr 1fr    ;
+    grid-template-rows:   300px 300px 300px  ;
+    grid-template-areas: 
+    " explore4 explore5 explore6   "
+    ". . . "
+    ". . .  ";
+  grid-gap: 4vmin;}
+
+.explore1{grid-area: explore1;background-color: white; position:relative;
+    padding:  px;  width:  px;  ;transition: padding 0.2s;}
+.explore2{grid-area: explore2;background-color: white;   position:relative;
+    padding:  px;  width:  px;  ;transition: ;transition: padding 0.2s;}
+.explore3{grid-area: explore3;background-color: white; position:relative;
+    padding:  px;  width:  px;  ;transition: padding 0.2s;}
+ 
+.explore4{grid-area: explore4; background-color: white;  position:relative;
+    padding:  px;  width:  px;  ;transition: padding 0.2s;}
+
+.explore5{grid-area: explore5; background-color: white;   position:relative;
+    padding:  px;  width:  px;  ;transition: padding 0.2s ;}
+.explore6{grid-area: explore6; background-color: white;   position:relative;
+    padding:  px;  width:  px;  ;transition: padding 0.2s ;}
 </style>
 </head>
 
@@ -427,7 +463,7 @@ a.forEach(dot => {dot.style.display='inline-block';});}
 <div class='dropdown' style='float:right'>
   <button onclick="drop()" style='border:non ' class='dropdownbutton '  > <a href="##"></i> Discover <i class="fa fa-caret-down"></i></a></button>
   <div id="dropdown-discover" class="insidedropdown">
-    <a href="#">BMI Calculator</a>
+    <a href="htmlwebsite-bmi-calculator.html">BMI Calculator</a>
     <a href="#">Calories Counter</a>
     
   </div>
@@ -458,7 +494,7 @@ a.forEach(dot => {dot.style.display='inline-block';});}
 <div class='img2'> 
  
     <img src="https://t3.ftcdn.net/jpg/02/23/57/42/360_F_223574261_LmzlzkLtjR0cxcDNvkmr2xHfMU69CheO.jpg" height='180px' width='300px' style="object-fit: cover">
-    <a target='_blank' href="bmi-calculator.html" style='color: currentColor;text-decoration: none;position :; ' >
+    <a target='_blank' href="htmlwebsite-bmi-calculator.html" style='color: currentColor;text-decoration: none;position :; ' >
     <p class="bmi-calculator-button">BMI Calculator </p> </a> </div>
  
  <div class='imgstyle'>
@@ -467,6 +503,7 @@ a.forEach(dot => {dot.style.display='inline-block';});}
           <div  id="dot_dis" class="dot"  onclick="current_slide_by_using_dot(2)"></div> 
           <div  id="dot_dis" class="dot"  onclick="current_slide_by_using_dot(3)"></div> 
           <div  id="dot_dis" class="dot"  onclick="current_slide_by_using_dot(4)"></div> 
+          <div  id="dot_dis" class="dot"  onclick="current_slide_by_using_dot(5)"></div> 
        
       </div>
   
@@ -501,6 +538,20 @@ background-color:rgba(255,255,255,0.95);border-radius: 5px;cursor: pointer;
           <img class='imgstyle' src="https://images.everydayhealth.com/images/consisten-exercise-helps-anxiety-and-stress-1440x810.jpg">
         </a></div>
          
+
+        <div class="imageSlides ">
+          
+          <img class='imgstyle' src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimg1.cookinglight.timeinc.net%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F4_3_horizontal_-_1200x900%2Fpublic%2F1578698236%2FBalanced%20Diet.jpg%3Fitok%3DBma9DcZ_" >
+           
+        <p style="position: absolute;;background-color:white;color: black; 
+        display:block;width:80% ;padding:20px;font-weight: 700; font-size: 25px;font-family: Proxima Nova Condensed,Proxima Nova Condensed Fallback,sans-serif;
+background-color:rgba(255,255,255,0.95);border-radius: 5px;cursor: pointer;
+        left: 50%; margin-right: -50%; transform: translate(-50%, -50%); text-align: center;top:75%; right:50% ;z-index: 2; " >
+         <a target='_blank' href="calories-counter.html" style='color: currentColor;
+        text-decoration: none;z-index: index 5;;;'> Which Diet Suit You Best?  </a> </p>
+      </div> 
+
+
         <div class="imageSlides ">
           <a target='_blank' href="https://my.clevelandclinic.org/health/diseases/11209-weight-control-and-obesity" style='color: currentColor;
           text-decoration: none;'> 
@@ -538,8 +589,8 @@ function displaySlides(num) {
 }
 
   //change the slide when go back(-1) and forth(+1)
-function change_slide_when_click_button(num) {
-    displaySlides(currentIndex += num);}
+function change_slide_when_click_button(num)
+ { displaySlides(currentIndex += num);}
     
     //change the index by on click dot
 function current_slide_by_using_dot(num)
@@ -566,62 +617,46 @@ No health for your time tomorrow.      </div>
   </div>
  <div class="wrapper1">
  
- 
 
-<div class=" inner-main">
-  <div class="img-news-inner"> <img alt="Insulin Resistance and Diabetes" src="https://flushinghospital.org/newsletter/wp-content/uploads/2015/01/food-300x200.jpg"  >  </div>
-  <div class='topic-inner'>DIET </div>
-  <div class='name-inner'>How Foods May Affect Our Sleep</div>
-  <div class='describe-inner'>A growing body of research suggests that the foods you eat can affect how well you sleep, and your sleep patterns can affect your dietary choices. </div>
- <p style='text-align:center'><span class='readmore'> <a target='_blank' href="https://www.nytimes.com/2020/12/10/well/eat/sleep-foods-diet.html" style='color: currentColor;
-   text-decoration: none;'>Read more</a></span><span style='font-family: "Century Gothic" ,sans-serif;  font-size:15px; font-weight:bold; color:#64c7c9;  cursor: pointer'> ></span></p>
- 
- </div>
-
-
-
-
-
-
-
-<div class="  inner4">
-  <div class="img-news-inner"> <img alt="Insulin Resistance and Diabetes" src="https://flushinghospital.org/newsletter/wp-content/uploads/2015/01/food-300x200.jpg"  > </div>
-
- <div class='topic-inner'>DIET </div>
-  <div class='name-inner'>How Foods May Affect Our Sleep</div>
-  <div class='describe-inner'>A growing body of research suggests that the foods you eat can affect how well you sleep, and your sleep patterns can affect your dietary choices. </div>
- <p style='text-align:center'><span class='readmore'> <a target='_blank' href="https://www.nytimes.com/2020/12/10/well/eat/sleep-foods-diet.html" style='color: currentColor;
-   text-decoration: none;'>Read more</a></span><span style='font-family: "Century Gothic" ,sans-serif;  font-size:15px; font-weight:bold; color:#64c7c9;  cursor: pointer'> ></span></p>
- 
-             </div>
+<div class="  inner4 ">
+  <a target='_blank' href="https://www.medicalnewstoday.com/articles/324483" >
+    <div class="img-news-inner"> <img alt="" src="https://cdn.images.express.co.uk/img/dynamic/11/590x/secondary/Lung-cancer-symptoms-People-with-the-disease-might-lose-their-appetite-856342.jpg"  > </div>
+   <div class='name-inner'>    Natural Ways to Cleanse Your Lungs  </div></a> 
+  </div>
+  
+   
 
  
+<div class="  inner5 ">
+  <a target='_blank' href="https://www.healthline.com/health/how-to-be-happy" >
+  <div class="img-news-inner"> <img alt="" src="https://images.theconversation.com/files/304963/original/file-20191203-66982-1rzdvz4.jpg?ixlib=rb-1.1.0&rect=31%2C71%2C5330%2C2665&q=45&auto=format&w=1356&h=668&fit=crop"  > </div>
+ <div class='name-inner'>   27 Habits That Can Make You Happier </div></a> 
+</div>
 
  
      
 
-<div class="inner2">
+<div class="inner-main">
+  <a target='_blank' href="https://www.healthline.com/health-news/what-types-of-music-help-you-fall-asleep-the-easiest" >
+    <div class="img-news-inner"> <img alt="" src="https://post.healthline.com/wp-content/uploads/2023/01/female-asleep-phone-1296x728-header-1296x729.jpg"  > </div>
+   <div class='name-inner'>    What Types of Music Help You Fall Asleep The Easiest </div></a> 
+  </div>
+  
+    
 
-  <div class="img-news-inner"> <img alt="Insulin Resistance and Diabetes" src="https://flushinghospital.org/newsletter/wp-content/uploads/2015/01/food-300x200.jpg"  > </div>
-<div class='name-inner'>How Foods May Affect Our Sleep</div>
-<div class='describe-inner'>A growing body of research suggests that the foods you eat can affect how well you sleep, and your sleep patterns can affect your dietary choices. </div>
-<p style='text-align:center'>  <a target='_blank' href="https://www.nytimes.com/2020/12/10/well/eat/sleep-foods-diet.html" style='color: currentColor;
-text-decoration: none;'></a> </div>
-
-
-
-      <div class="inner3">
-
-        <div class="img-news-inner"> <img alt="Insulin Resistance and Diabetes" src="https://flushinghospital.org/newsletter/wp-content/uploads/2015/01/food-300x200.jpg"  > </div>
- <div class='name-inner'>How Foods May Affect Our Sleep</div>
- <div class='describe-inner'>A growing body of research suggests that the foods you eat can affect how well you sleep, and your sleep patterns can affect your dietary choices. </div>
-<p style='text-align:center'> <a target='_blank' href="https://www.nytimes.com/2020/12/10/well/eat/sleep-foods-diet.html" style='color: currentColor;
-  text-decoration: none;'> </a> </div>
+ <div class="inner3">
+  <a target='_blank' href="https://www.healthline.com/health/breast-cancer" >
+    <div class="img-news-inner"> <img alt="" src="https://theinscribermag.com/wp-content/uploads/2019/04/Symptoms-of-breast-cancer.jpg"  > </div>
+   <div class='name-inner'>  A Comprehensive Guide to Breast Cancer</div></a> 
+  </div>
 
 
 
-
-
+  <div class=" inner2">
+    <a target='_blank' href="https://www.nbcnews.com/better/health/how-what-you-eat-affects-how-you-sleep-ncna805256" >
+      <div class="img-news-inner"> <img alt="" src="https://flushinghospital.org/newsletter/wp-content/uploads/2015/01/food-300x200.jpg"  > </div>
+     <div class='name-inner'>  How Foods May Affect Our Sleep</div></a> 
+    </div>
 
 </div>  
  
@@ -668,7 +703,7 @@ text-decoration: none;'></a> </div>
 
 
 <div class='flex-viewall'>
-<div class='header'>  VIDEOS </div>
+<div class='header'>  NEWS </div>
 <div class='viewall'> VIEW ALL <i class="fa fa-arrow-circle-o-right" aria-hidden="true"  ></i></div>
 </div>
 
@@ -679,32 +714,34 @@ text-decoration: none;'></a> </div>
     <a target='_blank' href="https://www.cdc.gov/diabetes/basics/insulin-resistance.html"><img alt="Insulin Resistance and Diabetes" src="https://images.everydayhealth.com/images/diabetes-awareness-month-1440x810.jpg" class="img-news" ></a>  
 <p>Insulin Resistance and Diabetes <p>
 </div>
-
-<div class="inner">
-
-  <a target='_blank' href="https://www.cdc.gov/diabetes/basics/insulin-resistance.html"><img alt="Insulin Resistance and Diabetes" src="https://images.everydayhealth.com/images/diabetes-awareness-month-1440x810.jpg" class="img-news" ></a>  
-<p>Insulin Resistance and Diabetes <p>
-</div>
-
-<div class="inner">
-
-  <a target='_blank' href="https://www.cdc.gov/diabetes/basics/insulin-resistance.html"><img alt="Insulin Resistance and Diabetes" src="https://images.everydayhealth.com/images/diabetes-awareness-month-1440x810.jpg" class="img-news" ></a>  
-<p>Insulin Resistance and Diabetes <p>
-</div>
-
+ 
 
  <div class='flex-viewall'>
-<div class='header'>  EXPLORE MORE </div>
+<div class='header'>  SPOTLIGHT </div>
 <div class='viewall'> VIEW ALL <i class="fa fa-arrow-circle-o-right" aria-hidden="true"  ></i></div>
 </div>
-<div></div>
 
 
 
+<div class="wrapper2"> 
+  <div class="explore4">
+    <div class="img-news-new"> <img alt="" src="https://flushinghospital.org/newsletter/wp-content/uploads/2015/01/food-300x200.jpg"  >  </div>
+     <div class='name-inner'>How Foods May Affect Our Sleep</div>
+   </div>
 
-<div class="inner inner3">
+   <div class="  explore5">
+    <div class="img-news-new"> <img alt="" src="https://post.healthline.com/wp-content/uploads/2023/01/female-asleep-phone-1296x728-header-1296x729.jpg"  > </div>
+    <div class='name-inner'>What Types of Music Help YOu Fall Asleep The Easiest</div>
+   </div>
 
-   <img class="img-news" alt="Insulin Resistance and Diabetes" src="https://flushinghospital.org/newsletter/wp-content/uploads/2015/01/food-300x200.jpg" >  
+   <div class="  explore6">
+    <div class="img-news-new"> <img alt="" src="https://post.healthline.com/wp-content/uploads/2023/01/female-asleep-phone-1296x728-header-1296x729.jpg"  > </div>
+    <div class='name-inner'>What Types of Music Help YOu Fall Asleep The Easiest</div>
+   </div>
+    
+  </div>
+ <!-- <div class="inner explore1 ">
+    <img class="img-news" alt=" " src="https://flushinghospital.org/newsletter/wp-content/uploads/2015/01/food-300x200.jpg" >  
 <div class='topic'>DIET </div>
 <div class='name'>How Foods May Affect Our Sleep</div>
 <div class='describe'>A growing body of research suggests that the foods you eat can affect how well you sleep, and your sleep patterns can affect your dietary choices. </div>
@@ -712,6 +749,24 @@ text-decoration: none;'></a> </div>
 text-decoration: none;'>Read more</a></span><span style='font-family: "Century Gothic" ,sans-serif;  font-size:15px; font-weight:bold; color:#64c7c9;  cursor: pointer'> ></span></p>
 </div>  
 
+<div class="inner explore2 ">
+    <img class="img-news" alt=" " src="https://flushinghospital.org/newsletter/wp-content/uploads/2015/01/food-300x200.jpg" >  
+<div class='topic'>DIET </div>
+<div class='name'>How Foods May Affect Our Sleep</div>
+<div class='describe'>A growing body of research suggests that the foods you eat can affect how well you sleep, and your sleep patterns can affect your dietary choices. </div>
+<p style='text-align:center'><span class='readmore'> <a target='_blank' href="https://www.nytimes.com/2020/12/10/well/eat/sleep-foods-diet.html" style='color: currentColor;
+text-decoration: none;'>Read more</a></span><span style='font-family: "Century Gothic" ,sans-serif;  font-size:15px; font-weight:bold; color:#64c7c9;  cursor: pointer'> ></span></p>
+</div>  
 
+<div class="inner explore3 ">
+  <img class="img-news" alt=" " src="https://flushinghospital.org/newsletter/wp-content/uploads/2015/01/food-300x200.jpg" >  
+<div class='topic'>DIET </div>
+<div class='name'>How Foods May Affect Our Sleep</div>
+<div class='describe'>A growing body of research suggests that the foods you eat can affect how well you sleep, and your sleep patterns can affect your dietary choices. </div>
+<p style='text-align:center'><span class='readmore'> <a target='_blank' href="https://www.nytimes.com/2020/12/10/well/eat/sleep-foods-diet.html" style='color: currentColor;
+text-decoration: none;'>Read more</a></span><span style='font-family: "Century Gothic" ,sans-serif;  font-size:15px; font-weight:bold; color:#64c7c9;  cursor: pointer'> ></span></p>
+</div>  -->
+
+ 
 </body>
 </html>
