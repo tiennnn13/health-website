@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta name="viewport" width="device-width">
+  
+<title> BMI CALCULATOR </title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">/*my icon*/
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">/*icons for navigational bar*/
+<style>
+ /*responsive navigator*/
+ .navi {z-index:7;list-style-type: none ;padding: 0px;background-color:black; position: fixed; top: 0; width:100%;margin-left: 0% ;height: 53px;padding-right:20px; }
+ .navi-right a {font-size: 20px;font-weight:700; color: white; ;padding: 15px; ;text-decoration: none;text-align: left;display: block;overflow:auto;background-color: #000000;}
+ .navi-right a:hover {font-weight: 700;  color:#ff603b; border-bottom: solid 1px #ff603b ; }
+ .navi-right a{float:right;}
+ .navi a.this-one-is-active { background-color: #ff603b;  color: white; height: px}
+.navi-left{margin-left:60px; font-family:"Fira Sans","Lucida Console";font-size: 40px; color:orange; font-family: Century Gothic;font-weight:bold}
+
+/*dropdown navigator*/
+.dropdown {position: relative; display: block;height:43px;}
+
+.insidedropdown {background-color:hsl(11, 100%, 90%);display: none; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  overflow: hidden;
+  position: absolute;  ; z-index: 3; ;width: 200px ;  ;margin-top:-4px;}
+.insidedropdown a {
+  color: black;background-color: #ffb5ad;
+  padding-right:px;
+  text-decoration: none; float:none;
+  display: block;font-size:18px; text-align:center ;
+}
+.insidedropdown a:hover {border-bottom:none;font-weight: bold; background-color: pink; color: black;}
+
+.dropdownbutton{border:none;background-color:black;font-size: ; margin-left: ;padding:0px;}
+ 
+.show-discover {display: block;}
+.button-discover{padding:0px;}
+
+
+/* body*/
+body{ cursor: context-menu;background-color:#fff3f1fa;font-family: "Proxima Nova","Proxima Nova Fallback",sans-serif;margin-right:0px;margin-left:0px;margin-top:0px;margin-bottom:0px;}
+
+.body_except_navi{margin-left:0px;margin-right:0px;margin-top:0px;padding: 0;
+    display: block;
+   }
+
+/* header*/
+.flex-viewall{     list-style-type: none; margin-block-start: 0px;margin-block-end: 0px;margin-inline-start: 0px;margin-inline-end: 0px; padding-inline-start: 0px;
+display: flex;align-items: center;border-bottom: solid 2px #dcdbdb;justify-content: space-between; ;margin-bottom:40px; }
+
+.header {  font-family: "Proxima Nova","Proxima Nova Fallback",sans-serif;  font-size:30px;
+ font-weight:bold; color:#f48f78;  ;justify-content: space-between;}
+
+ .viewall{  font-family: "Proxima Nova","Proxima Nova Fallback",sans-serif;  font-size:15px;border-bottom: solid 0.1px #64c7c9;
+ font-weight:bold; color:#64c7c9;padding-bottom:1px; margin-bottom:10px;  cursor: pointer;}
+
+.view a { color: #fd8177; font-family: sans-serif; font-size: 30px; transition: linear; font-weight: bold;padding-bottom: 30px;text-align: center;}
+.view a:hover {    color:#990000;}
+
+
+.style-for-font{color: Orange; font-size:20px;background;font-weight:bold;}
+
+
+/* section */
+.flex-option {justify-content:  space-between;
+  display: flex; flex-wrap: nowrap; gap: auto ; align-items: center; flex-direction: row;overflow: ;  overflow-x:  ; }
+  .option-inside{}
+
+.circle img{border-radius:100%;flex: 20% 0 auto; display:block;position:  ;width:150px;height:150px;}
+
+.text-option{ font-family: Lucida Sans Unicode;position:relative; text-align: center;margin-top: 10px; cursor: pointer;margin-top:;letter-spacing:;}
+.text-option:hover{color: pink; text-decoration: underline;}
+   
+
+
+::-webkit-scrollbar {
+  width: 10px; height:10px;}/*the size of the scroll bar*/
+
+ ::-webkit-scrollbar-track {
+  background-color:  white;   }
+
+ ::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+ background-color: #f97a6c; scrollbar-width:thin; border:   ;  box-sizing: border-box;}
+ ::-webkit-scrollbar-thumb:hover { background:#f48f78;}    
+ 
+  
+/* animated banner*/
+.banner {overflow: hidden; background:white ;margin-left:0%;margin-right:0%; width: 100%;left:0%;}
+.banner-move { animation: name-of-animation linear/*same speed*/ 20s infinite; }
+.banner-move{ display: flex ;}
+.banner-move:hover { color:white;}
+.hitem { margin-top:10px;margin-bottom:10px; flex-shrink: 0 /*lay all of the items out in a long horizontal row*/ ; width: 100%; ; box-sizing: border-box;  ;  text-align: center;}
+ 
+ 
+@keyframes name-of-animation{
+  0% /* the same as from*/ { transform: translate3d(100%, 0, 0); }
+  100% /* the same as to*/ { transform: translate3d(-300%, 0, 0); }
+}
+
+/* welcometohilife*/
+.hidden{ display:none; height: 140%;    background-color: rgba(0,0,0, 0.5);
+  ;width: 120% ; margin:-70px;
+  z-index: 4; 
+  overflow-y: hidden;
+  transition: 1s;position: fixed; 
+		border-radius: 10px ;   ; 
+		box-shadow: 4px 4px 10px 0px ;rgba(#000000, 0.6);}
+
+.hidden-content {display:block;margin-left:20%;margin-right:20%;
+  position: relative; 
+  text-align: center;
+  margin-top: 30px;}
+
+.hidden a{ padding:0px 0px 0px 0px; text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.5s;
+}
+.hiddentext:hover{color: #f1f1f1}
+
+.welcometohilife:hover{color:#fd8177}
+.style-popup{display:block; height: 500px;  top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  ;width: 500px ; 
+  z-index: 4; 
+  overflow-y: hidden;
+  transition: 1s;position: fixed;background: #FFFFFF;
+		padding: 30px;
+		border-radius: 10px ;   ;border: 10px solid red; ;padding : 10px;
+		box-shadow: 4px 4px 10px 0px rgba(#000000, 0.6);}
+
+
+/* slideshow   */
+.imageSlides{display: none;position:absolute;margin-top:; width:100%;}
+ 
+  
+.theslideshow {margin-left: 0% ; 
+  margin-right: %;
+  margin-top: 70px;top:0%;
+  position: relative;display:block;
+  margin-left:  ;  /* very important */ }
+
+  .text-slideshow{position: absolute;;top:20%; right: ;background-color:white;color: black; }
+   
+ .position-image{margin-top:  ;margin-bottom: ;position:relative;}
+ 
+.imgstyle {position:relative; height:400px;width: 650px;}
+ 
+   
+
+
+
+.slider-btn{
+  cursor: pointer;
+  position: absolute;
+   top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding: 8px 16px;
+  
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 18px; 
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: white;
+  border-radius: 50%;
+}
+ 
+
+.go-back { left: 1%;} 
+.go-forth{right: 1%;}
+ 
+.go-back:hover,.go-forth:hover {  color: rgb(255, 253, 253);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+  .dot {  cursor: pointer; height: 16px; width: 16px; margin: 6px; background-color: grey; border-radius: 50%;
+   display:none  ; transition: background-color 0.6s ease; transition:display 5s ease;}
+
+.dot_position{ position: absolute  ; z-index:2; ; text-align: center;margin-top: 0px; width: 100%; bottom:1% }
+
+.active, .dot:hover {
+  background-color: white;}
+ .img1{ position:absolute; right: 0% ; top:0px;  }
+ .img2{ position:absolute; right: 0% ; bottom:0px;}
+  
+
+  @media   screen  and (min-width: 1900px){
+.body_except_navi{margin-left:23%;margin-right:23%} 
+ 
+.imgstyle{  height: ;width: 670px;}}
+  
+   @media   screen  and (max-width: 1900px){
+.body_except_navi{margin-left:20%;margin-right:20%} 
+ 
+.imgstyle{  height: ;width: 630px;}}
+
+ 
+
+@media  screen  and  (max-width:1600px){
+.body_except_navi{margin-left:15%;margin-right:15%}
+ 
+.imgstyle{  height: ;width: 680px;}} 
+
+@media  screen  and  (max-width:1500px){
+.body_except_navi{margin-left:15%;margin-right:15%}
+ 
+.imgstyle{  height: ;width: 650px;}} 
+
+
+@media  screen  and (max-width: 1400px) {
+.body_except_navi{margin-left:15%;margin-right:15%} 
+ 
+.imgstyle{  height: ;width: 620px;}}
+
+@media  screen  and (max-width: 1360px) {
+.body_except_navi{margin-left:13%;margin-right:13%} 
+ 
+.imgstyle{  height: ;width: 600px;}}
+
+@media  screen  and (max-width: 1300px) {
+  .body_except_navi{margin-left:10%;margin-right:10%} 
+ 
+.imgstyle{ height:400px;width:  px;}}
+
+
+@media screen  and (max-width: 1200px) {
+  .body_except_navi{margin-left:10%;margin-right:10%} 
+ .imgstyle{  height:400px;width: 600px;}}
+
+
+ @media screen  and (max-width: 1150px) {
+  .body_except_navi{margin-left:6%;margin-right:6%} 
+ .imgstyle{  height:400px;width: 630px;}}
+
+
+ @media screen  and (max-width: 1090px) {
+  .body_except_navi{margin-left:6%;margin-right:6%} 
+ .imgstyle{  height:400px;width: 580px;}}
+
+ @media screen  and (max-width: 1030px) {
+  .body_except_navi{margin-left:6%;margin-right:6%} 
+ .imgstyle{  height:390px;width: 540px;}}
+
+ @media screen  and (min-width: 200px) and (max-width: 680px) {
+  ::-webkit-scrollbar{width:0px;height:0px}
+.body_except_navi{margin-left:30px;margin-right:30px}  
+ .imgstyle{  height:380px;width: 500px;}}
+ 
+
+/* do not use right now if resize have problems
+.flexbox{  justify-content: space-between;   list-style-type: none; margin-block-start: 0px;margin-block-end: 0px;margin-inline-start: 0px; margin-inline-end: 0px;margin-left: ;margin-right: ;padding-inline-start: 0px;
+display: flex; flex-wrap: wrap;  ; align-items: center; flex-direction: row;overflow:visible;}
+careful with row cause just puit random*/ 
+
+ .inner {  
+    background-color: white; border:solid 1px #dcdbdb;
+    padding:  px;  width: 300px; height:500px;transition: padding 0.2s; }
+
+.inner:hover { background-color: ;  }
+
+
+
+.topic{text-align:center;font-family: "Century Gothic", ,sans-serif;  font-size:17px;text-decoration: underline;
+ font-weight:bold ;color:#64c7c9 ;padding-bottom: ; margin-bottom: ; cursor: pointer; margin-top:10px;margin-bottom:10px; }
+
+ .topic-inner{position:absolute;font-family: "Century Gothic", ,sans-serif;  font-size:17px;text-decoration: underline;
+ font-weight:bold ;color:#64c7c9 ;padding-bottom: ; margin-bottom: ; cursor: pointer; margin-top:10px;margin-bottom:10px; }
+
+.name{text-align:center;font-family: "Century Gothic", ,sans-serif;  font-size:25px; ;
+ font-weight:bold; color:black;padding-bottom: ; margin-bottom: 15px;}
+
+ .name-inner{text-align:center;  font-size:20px; ;
+ font-weight:bold; color:black;padding-bottom: ; margin-bottom: px;position:absolute;  left:10%;top:0%;;font-family: "Century Gothic", ,sans-serif;z-index:2;}
+
+.describe{text-align:center;font-family: "Century Gothic", ,sans-serif;  font-size:15px; ;
+ font-weight: ; color:black;padding-bottom: ; margin-bottom: ; 
+ overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 2; /* number of lines to show */
+           line-clamp: 2; 
+   -webkit-box-orient: vertical;}
+
+   .describe-inner{text-align:center;font-family: "Century Gothic", ,sans-serif;  font-size:10px; ;
+ font-weight: ; color:black ;padding-bottom: ; margin-bottom: ; position:absolute; left:10%;top:0%;
+ overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 2; /* number of lines to show */
+           line-clamp: 2; 
+   -webkit-box-orient: vertical;}
+
+.readmore{ text-align:center;font-family: "Century Gothic", ,sans-serif;  font-size:17px;text-decoration: underline;
+ font-weight:bold; color:#64c7c9 ;
+ padding-bottom: ; margin-bottom: ; cursor: pointer; margin-top:10px;margin-bottom:10px; }
+
+  
+ 
+ .img-news {display:block; width: 200px  ; height: 200px; top: ;  ; margin-bottom:  px; position:relative;  }
+ .img-news-inner img{position:absolute ;width: 100% ; height: 100%;; object-fit: fill  ;margin-top: ; display:block ;border-radius:30px;}
+
+
+
+table, th, td {border: 1px solid black; border-collapse:collapse;}
+th{background-color:yellow}
+td{text-align:center}
+
+a.intro:link, a.intro:visited {background-color: #f44336;color: white;padding: 15px 25px;text-align: center;text-decoration: none;display: inline-block;}
+a.intro:hover, a.intro:active { background-color: red;} 
+
+
+.layout{
+    display: grid;
+ 
+    grid-template-areas: "main bmi";
+
+    grid-template-columns: 85% 25%;
+    grid-template-rows: 1fr;
+    grid-gap: 2vw ; 
+  }
+ .main{grid-area: main ;}
+ .bmi{grid-area: bmi; position:sticky ;  display: block;top: 20%; padding-left:2vw ;border-left:0px solid pink; left:0%; height:200px ; }
+
+ /* bmi calcularor design */
+.bmi-box{ background-color: #f1f1f1;}        
+
+
+.calculate-button { 
+	display: inline-block; 
+	padding: 20px 40px;
+	color: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	vertical-align: middle;
+	font-family: 'Rubik One', sans-serif;
+	text-decoration: none;
+	font-size: 4vw;
+	transition: all .5s;
+	background-color: #3498db;}````
+
+
+
+
+
+
+
+</style>
+
+<head>
+
+<title> BMI CALCULATOR </title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+ 
+
+
+
+<body >
+<nav>
+  <div class='navi'>
+    <div class='navi-right'>
+       <a href="#about"> <i class="fa fa-user-o" aria-hidden="true"></i> About</a> 
+        <a href="htmlwebsite-knowledge.html"><i class="fa fa-book" aria-hidden="true"></i> Knowledge</a>  
+     
+        
+    <div class='dropdown' style='float:right'>
+      <button onclick="drop()" style='border:non ' class='dropdownbutton '  > 
+         <a class='this-one-is-active' href="##"></i> Discover <i class="fa fa-caret-down"></i></a></button>
+      <div id="dropdown-discover" class="insidedropdown">
+        <a  href="#">BMI Calculator</a>
+        <a href="#">Calories Counter</a>
+        
+      </div>
+    </div>
+    <a href="htmlwebsite-search.html"><i class="fa fa-search" aria-hidden="true"></i> Search </a> 
+       <a  href="htmlwebsite-home.html"><i class="fa fa-fw fa-home"></i> Home</a> </div> 
+    <div class='navi-left'>
+    <span  onclick="openNav()" style='cursor:pointer'>hi life !</span>
+    </div></div></div>
+    <script>
+     function drop() {
+      document.getElementById("dropdown-discover").classList.toggle("show-discover");
+    }
+    </script>
+     
+      
+<img src='https://static.vecteezy.com/system/resources/previews/001/226/748/original/colorful-sunset-sky-free-photo.jpg' alt='tree'  width=100% height="400px">
+
+ 
+<div class="body_except_navi">  
+  <div class="layout"> 
+
+
+
+
+
+
+
+
+
+
+
+
+     <!-- bmi calculator section-->
+ 
+<div class="bmi ">
+  <div class="bmi-box">
+  <p>BMI Calculator</p>
+ 
+  <p>Give Your Height (in cm)</p>
+ 
+  <input type="text" id="height-index">
+ 
+  <p>GIve Your Weight (in kg)</p>
+ 
+  <input type="text" id="weight-index">
+ 
+  <button class='calculate-button' id="calculate-button">Calculate</button>
+ 
+  <div id="result-from-calculator"></div>
+ </div> 
+ </div>
+
+ <script>
+ window.onload = () => {
+ let button = document.querySelector("#calculate-button");
+ 
+  
+ button.addEventListener("click", calculateBMI);
+ };
+ 
+ function calculateBMI() {
+ 
+  // The input is string so parseFolat is used to tranfer it to number so that we can calculate
+ let height = parseFloat(document.querySelector("#height-index").value);
+ let weight = parseFloat(document.querySelector("#weight-index").value);
+ 
+ let result = document.querySelector("#result-from-calculator");
+ 
+ /* These parts are used to testified if the user put the number or string, 
+ if they put correctly, it will start to calculate, if not it will give an alarm.*/
+ if (height === "" || isNaN(height)) 
+  result.innerHTML = "Please give a valid Height !!!";
+ 
+ else if (weight === "" || isNaN(weight)) 
+  result.innerHTML = "Please give a valid Weight !!!";
+ 
+ else {
+  
+  let bmi = (weight / ((height * height) 
+                      / 10000)).toFixed(4);
+ 
+ 
+  if (bmi < 18.6) result.innerHTML =
+      `You are 'Under Weight' : <span>${bmi}</span>`;
+ 
+  else if (bmi >= 18.6 && bmi < 24.9) 
+      result.innerHTML = 
+          `You are 'Normal' : <span>${bmi}</span>`;
+ 
+  else result.innerHTML =
+      `You are 'Over Weight' : <span>${bmi}</span>`;
+ }
+ }
+ </script>
+ 
+<div class="main">
+	<div class='color'> <h1> Bookmarks</h1> </div>
+
+<h2>MEASURING BMI</h2>
+<h3></h3>
+ 
+		<p><a class='style-for-font' href='#C1'> I.What is BMI?</a></p>
+		<p> <a  class='style-for-font' href='#C2'> II.Range</a></p> 
+		
+		<a  class='style-for-font' href='#C3'> IV.Health risks</a></button>
+			<div class='panel' >  <ul> 
+				<p>Underweight</p>
+				<p>Overweight</p> 
+   			 </ul></div>
+		<p><a  class='style-for-font' href='#C4'>IV.Solution</a></p>
+	
+<hr>
+
+
+
+
+
+<br id='C1'><br><br><br>
+<p  class='style-for-font' >I. What is BMI?</p>
+<p ><b>The body mass index (BMI)</b> is a measure that uses your height and weight to work out if your weight is healthy.
+<a   href='https://www.nhs.uk/common-health-questions/lifestyle/what-is-the-body-mass-index-bmi/' target='_blank'> According to NHS</a></p>
+
+
+ 
+
+<br>
+<p><a class='intro' href='https://www.nhs.uk/common-health-questions/lifestyle/what-is-the-body-mass-index-bmi/' target='_blank'> it was just a normal button</a></p>
+<p >
+&#128512; &#128516; &#128525; &#128151;
+</p>
+<br>
+
+<p  class='style-for-font' >II. Range</p>
+<table id='C2'>
+<caption> BODY MASS INDEX</caption>
+  <tr style='height:40px'>
+    <th style='width:60%' >BMI</th>
+    <th>Weight Categories</th>
+     
+  </tr>
+  <tr>
+    <th>Underweight</th>
+    <td>< 18.5</td> 
+  </tr>
+  <tr>
+    <th>Normal</th>
+    <td>18.5 - 24.9</td> 
+  <tr>
+    <th>Overweight</th>
+    <td>25-29.9</td> 
+  </tr>
+  <tr>
+    <th>Obese Class I</th>
+    <td>30.0 - 34.9</td>
+ <tr>
+    <th>Obese Class II</th>
+    <td>35.0 - 39.9</td>  
+  </tr>
+ <tr>
+    <th>Obese Class III</th>
+    <td>> 40.0</td>
+  </tr>
+</table>
+<p></p>
+
+ 
+ 
+<p  class='style-for-font'  id='C3'>IV. Health risks</p>
+<ul >
+	<li>Underweight</li>
+ 
+	<li>Overweight</li>
+ </ul>
+
+<p class='style-for-font' id='C4'  ><b> V.Solution</b></p>
+<figure ><img src='https://www.foodbusinessnews.net/ext/resources/FBN-Features/5/TopDietsChart2_Embedded.jpg' alt="Popular Diet For Weight Loss" usemap='#diet' width="500" height="400"  title='click into the diet you want to have more informaion about' >
+	<map name='diet'>
+	<area shape='rect' coords='40,80,140,200' alt='Intermittent Fasting' href='https://www.hopkinsmedicine.org/health/wellness-and-prevention/intermittent-fasting-what-is-it-and-how-does-it-work' target='_blank'>
+	<area shape='rect' coords='180,80,240,200' alt='Paleo' href='https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/paleo-diet/art-20111182' target='_blank'>
+	<area shape='rect' coords='340,80,460,200' alt='Low-carb' href='https://www.mayoclinic.org/healthy-lifestyle/weight-loss/in-depth/low-carb-diet/art-20045831' target='_blank'>
+	<area shape='rect' coords='40,260,140,380' alt='Whole30' href='https://www.everydayhealth.com/diet-and-nutrition/diet/whole30-program-what-know-before-starting-diet-plan/' target='_blank'>
+	<area shape='rect' coords='180,260,240,380' alt='High-Protein' href='https://www.medicalnewstoday.com/articles/324915' target='_blank'>
+	<area shape='rect' coords='340,260,460,380' alt='Ketogenic' href='https://www.webmd.com/diet/ss/slideshow-ketogenic-diet' target='_blank'>
+	<br>
+	<figcation>Source: <a  href='https://www.foodbusinessnews.net/articles/11838-ific-survey-36-of-americans-follow-a-specific-diet' target='_blank'>Foods Business News</a></figcaption></figure>
+ 
+</div>
+</div>
+</div></div>
+</body>
+</html>
