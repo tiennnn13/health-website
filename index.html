@@ -3,7 +3,7 @@
 <head>
   <meta name="viewport" width="device-width">
   
-<title> BMI CALCULATOR </title>
+<title> Tien's project </title>
 <link rel="icon" type="image/x-icon" href="favicon.ico">/*my icon*/
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">/*icons for navigational bar*/
@@ -85,12 +85,11 @@ display: flex;align-items: center;border-bottom: solid 2px #dcdbdb;justify-conte
  
   
 /* animated banner*/
-.banner {overflow: hidden; background:white ;margin-left:0%;margin-right:0%; width: 100%;left:0%;}
+.banner {overflow: hidden; background:rgb(255, 221, 221) ;margin-left:0%;margin-right:0%; width: 100%;left:0%;}
 .banner-move { animation: name-of-animation linear/*same speed*/ 20s infinite; }
 .banner-move{ display: flex ;}
-.banner-move:hover { color:white;}
-.hitem { margin-top:10px;margin-bottom:10px; flex-shrink: 0 /*lay all of the items out in a long horizontal row*/ ; width: 100%; ; box-sizing: border-box;  ;  text-align: center;}
- 
+.hitem { margin-top:5px;margin-bottom:5px; font-size:18px;flex-shrink: 0 /*lay all of the items out in a long horizontal row*/ ; width: 100%; ; box-sizing: border-box;  ;  text-align: center;}
+ .hitem:hover{color:rgb(240, 44, 109);}
  
 @keyframes name-of-animation{
   0% /* the same as from*/ { transform: translate3d(100%, 0, 0); }
@@ -319,7 +318,7 @@ display: flex;align-items: center;border-bottom: solid 2px #dcdbdb;justify-conte
 
  /* news section */
 .news-main{padding: 0;display: flex;
-    margin: 0;
+    margin: 0; gap: 0px;
     list-style: none;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -327,11 +326,11 @@ display: flex;align-items: center;border-bottom: solid 2px #dcdbdb;justify-conte
 
  .news-design{font-size: 17px;
     line-height: 26px;
-    margin-bottom: 8px; display:flex;}
+    margin: 20px 0px 10px 0px; display:flex;}
 
 
   
-  .news-image{cursor: pointer; position:relative;}
+  .news-image{cursor: pointer; position:relative;margin: 0px ;}
 
   .news-explanation{margin-bottom: 0; 
     margin-top: 1px;
@@ -339,15 +338,16 @@ display: flex;align-items: center;border-bottom: solid 2px #dcdbdb;justify-conte
     line-height: 22px;}
 
 
- .news-header-box{position:relative; margin-left: %;height:50px; top:0%;width:200px;}
+ .news-header-box{position:relative;margin-left:10px;height:50px; top:0%;width:250px;}
   .news-header{cursor: pointer;  
     text-decoration: none;  border-color: currentColor;
     color: #02838d;  
     font-family: "Proxima Nova Condensed","Proxima Nova Condensed Fallback",sans-serif;   font-weight: 700;
     ; display: block; ;  margin: 0;   font-size: 20px;  line-height: 26px;   }
 
-
-
+.news-header:hover{color:#d8189e;}
+ .a:link{ text-decoration: none;}
+ .a:visited{ text-decoration: none;}
 
   .wrapper1 { background-color: ;
     display: grid;margin-top:100px;margin-bottom:100px;margin-right:50px;margin-left:50px;
@@ -572,14 +572,14 @@ a.forEach(dot => {dot.style.display='inline-block';});}
          
          <div class="imageSlides ">
           
-          <img class='imgstyle' src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimg1.cookinglight.timeinc.net%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F4_3_horizontal_-_1200x900%2Fpublic%2F1578698236%2FBalanced%20Diet.jpg%3Fitok%3DBma9DcZ_" >
+          <img class='imgstyle' src="https://static01.nyt.com/images/2021/01/26/well/well-foods-microbiome/well-foods-microbiome-videoSixteenByNine3000-v2.jpg" >
            
         <p style="position: absolute;;background-color:white;color: black; 
         display:block;width:80% ;padding:20px;font-weight: 700; font-size: 25px;font-family: Proxima Nova Condensed,Proxima Nova Condensed Fallback,sans-serif;
 background-color:rgba(255,255,255,0.95);border-radius: 5px;cursor: pointer;
         left: 50%; margin-right: -50%; transform: translate(-50%, -50%); text-align: center;top:75%; right:50% ;z-index: 2; " >
-         <a target='_blank' href="calories-counter.html" style='color: currentColor;
-        text-decoration: none;z-index: index 5;;;'> Which Diet Suit You Best?  </a> </p>
+         <a target='_blank' href="https://health.usnews.com/wellness/food/articles/what-is-the-best-diet-for-you" style='color: currentColor;
+        text-decoration: none;z-index: index 5;'> Which Diet Suit You Best?  </a> </p>
       </div> 
 
          <div class=" imageSlides ">
@@ -591,21 +591,21 @@ background-color:rgba(255,255,255,0.95);border-radius: 5px;cursor: pointer;
 
         <div class="imageSlides ">
           
-          <img class='imgstyle' src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimg1.cookinglight.timeinc.net%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F4_3_horizontal_-_1200x900%2Fpublic%2F1578698236%2FBalanced%20Diet.jpg%3Fitok%3DBma9DcZ_" >
+          <img class='imgstyle' src="http://idealhealthcare.net/wp-content/uploads/2015/10/Preventive-Header.jpg" >
            
         <p style="position: absolute;;background-color:white;color: black; 
-        display:block;width:80% ;padding:20px;font-weight: 700; font-size: 25px;font-family: Proxima Nova Condensed,Proxima Nova Condensed Fallback,sans-serif;
+        display:block;width:80% ;padding:15px;font-weight: 700; font-size: 20px;font-family: Proxima Nova Condensed,Proxima Nova Condensed Fallback,sans-serif;
 background-color:rgba(255,255,255,0.95);border-radius: 5px;cursor: pointer;
         left: 50%; margin-right: -50%; transform: translate(-50%, -50%); text-align: center;top:75%; right:50% ;z-index: 2; " >
-         <a target='_blank' href="calories-counter.html" style='color: currentColor;
-        text-decoration: none;z-index: index 5;;;'> Which Diet Suit You Best?  </a> </p>
+         <a target='_blank' href="https://www.news-medical.net/news/20230515/Resting-heart-rate-as-a-cardiorespiratory-health-biomarker.aspx" style='color: currentColor;
+        text-decoration: none;z-index: index 5;;;'> Resting heart rate as a cardiorespiratory health biomarker </a> </p>
       </div> 
 
 
         <div class="imageSlides ">
           <a target='_blank' href="https://my.clevelandclinic.org/health/diseases/11209-weight-control-and-obesity" style='color: currentColor;
           text-decoration: none;'> 
-          <img class='imgstyle' src="https://static.vecteezy.com/system/resources/previews/001/226/748/original/colorful-sunset-sky-free-photo.jpg">
+          <img class='imgstyle' src="https://i.etsystatic.com/9032627/r/il/435c5e/657144247/il_794xN.657144247_e439.jpg">
         </a></div> 
         
          
@@ -655,8 +655,9 @@ function current_slide_by_using_dot(num)
  <div class="banner"><div class="banner-move">
   <div class="hitem">No time for your health today, <br />
 No health for your time tomorrow.      </div>
-  <div class="hitem">g g g g g g g g g g gdbvdfb fbfdgb fbdbfdbd dbdbdb .</div>
-  <div class="hitem">1234 4332 4566 4443 44 3 34 3444 434 34454 4444 .</div>
+  <div class="hitem">It is exercise alone that supports the spirits,<br> and keeps the mind in vigor.</div>
+  <div class="hitem">Happiness is the highest form of health. </div>  
+  <div class="hitem">Let food be thy medicine and medicine be thy food.</div>
 </div></div>
 
  
@@ -767,9 +768,27 @@ No health for your time tomorrow.      </div>
     <figure class="news-image">
       <img alt="" src="https://post.healthline.com/wp-content/uploads/2023/01/female-asleep-phone-1296x728-header-1296x729.jpg" width="200px" height="100px" > 
     </figure>
+   <div class='news-header-box'> <a target='_blank' href="https://www.nbcnews.com/better/health/how-what-you-eat-affects-how-you-sleep-ncna805256" >
+   <p class="news-header"> Plant and Animal Protein for Muscles and Weight Loss</p></a>
+    <p class="news-explanation"> </p></div> 
+  </li>
+
+  <li class='news-design'> 
+    <figure class="news-image">
+      <img alt="" src="https://www.mindyra.com/hs-fs/hubfs/images/childrens-adhd-min.jpg?width=4250&name=childrens-adhd-min.jpg" width="200px" height="100px" > 
+    </figure>
    <div class='news-header-box'>
-   <p class="news-header"> Plant and Animal Protein for Muscles and Weight Loss</p>
-    <p class="news-explanation">aaaa aaaaaa aaaaaa aaaaa aaaaa aaa aaaaas </p></div>
+   <p class="news-header"> Most Children with ADHD Aren't Being Treated, Study Finds</p>
+    <p class="news-explanation">  </p></div>
+  </li>
+
+  <li class='news-design'> 
+    <figure class="news-image">
+      <img alt="" src="https://livingmaples.com/wp-content/uploads/2020/11/senior-playing-music.jpg" width="200px" height="100px" > 
+    </figure>
+   <div class='news-header-box'>
+   <p class="news-header"> The Benefits of Music for People with Alzheimer's or Dementia</p>
+    <p class="news-explanation">   </p></div>
   </li>
 
   <li class='news-design'> 
@@ -778,25 +797,7 @@ No health for your time tomorrow.      </div>
     </figure>
    <div class='news-header-box'>
    <p class="news-header"> Plant and Animal Protein for Muscles and Weight Loss</p>
-    <p class="news-explanation">aaaa aaaaaa aaaaaa aaaaa aaaaa aaa aaaaas </p></div>
-  </li>
-
-  <li class='news-design'> 
-    <figure class="news-image">
-      <img alt="" src="https://post.healthline.com/wp-content/uploads/2023/01/female-asleep-phone-1296x728-header-1296x729.jpg" width="200px" height="100px" > 
-    </figure>
-   <div class='news-header-box'>
-   <p class="news-header"> Plant and Animal Protein for Muscles and Weight Loss</p>
-    <p class="news-explanation">aaaa aaaaaa aaaaaa aaaaa aaaaa aaa aaaaas </p></div>
-  </li>
-
-  <li class='news-design'> 
-    <figure class="news-image">
-      <img alt="" src="https://post.healthline.com/wp-content/uploads/2023/01/female-asleep-phone-1296x728-header-1296x729.jpg" width="200px" height="100px" > 
-    </figure>
-   <div class='news-header-box'>
-   <p class="news-header"> Plant and Animal Protein for Muscles and Weight Loss</p>
-    <p class="news-explanation">aaaa aaaaaa aaaaaa aaaaa aaaaa aaa aaaaas </p></div>
+    <p class="news-explanation">  </p></div>
   </li>
 
 
@@ -805,12 +806,6 @@ No health for your time tomorrow.      </div>
 
 
 
-<div class='flexbox'>
-  <div class="inner">
-
-    <a target='_blank' href="https://www.cdc.gov/diabetes/basics/insulin-resistance.html"><img alt="Insulin Resistance and Diabetes" src="https://images.everydayhealth.com/images/diabetes-awareness-month-1440x810.jpg" class="img-news" ></a>  
-<p>Insulin Resistance and Diabetes <p>
-</div>
  
 
  <div class='flex-viewall'>
