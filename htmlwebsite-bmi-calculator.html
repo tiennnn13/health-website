@@ -3,7 +3,7 @@
 <head>
   <meta name="viewport" width="device-width">
   
-<title> BMI CALCULATOR </title>
+
 <link rel="icon" type="image/x-icon" href="favicon.ico">/*my icon*/
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">/*icons for navigational bar*/
@@ -56,8 +56,8 @@ display: flex;align-items: center;border-bottom: solid 2px #dcdbdb;justify-conte
 .view a { color: #fd8177; font-family: sans-serif; font-size: 30px; transition: linear; font-weight: bold;padding-bottom: 30px;text-align: center;}
 .view a:hover {    color:#990000;}
 
-
-.style-for-font{color: Orange; font-size:20px;background;font-weight:bold;}
+.boxforbookmarks{padding-left:70px;border:solid   black;border-style:double;}
+.style-for-font{color: Orange; font-size: 25px ;font-weight:6px;font: Fira Sans;}
 
 
 /* section */
@@ -328,27 +328,26 @@ a.intro:hover, a.intro:active { background-color: red;}
  .bmi{grid-area: bmi; position:sticky ;  display: block;top: 20%; padding-left:2vw ;border-left:0px solid pink; left:0%; height:200px ; }
 
  /* bmi calcularor design */
-.bmi-box{ background-color: #f1f1f1;}        
+.bmi-box{ margin-top: 30px;background-color: #ffc4c4;padding:0px 15px; border: solid 2px black;}        
 
 
 .calculate-button { 
 	display: inline-block; 
-	padding: 20px 40px;
-	color: white;
-	position: absolute;
-	top: 50%;
+	padding: 8px 16px;
+	color: rgb(0, 0, 0);
+	position: relative;
+  margin-top: 35px;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	vertical-align: middle;
 	font-family: 'Rubik One', sans-serif;
 	text-decoration: none;
-	font-size: 4vw;
+	font-size: 20px;
 	transition: all .5s;
-	background-color: #3498db;}````
+	background-color: #ff5b5b;} 
 
 
-
-
+.calculate-button:hover{background-color: #fff9fa;font-size: 22px;}
 
 
 
@@ -368,7 +367,7 @@ a.intro:hover, a.intro:active { background-color: red;}
   <div class='navi'>
     <div class='navi-right'>
        <a href="#about"> <i class="fa fa-user-o" aria-hidden="true"></i> About</a> 
-        <a href="htmlwebsite-knowledge.html"><i class="fa fa-book" aria-hidden="true"></i> Knowledge</a>  
+        <a href="#"><i class="fa fa-book" aria-hidden="true"></i> Knowledge</a>  
      
         
     <div class='dropdown' style='float:right'>
@@ -381,7 +380,7 @@ a.intro:hover, a.intro:active { background-color: red;}
       </div>
     </div>
     <a href="htmlwebsite-search.html"><i class="fa fa-search" aria-hidden="true"></i> Search </a> 
-       <a  href="htmlwebsite-home.html"><i class="fa fa-fw fa-home"></i> Home</a> </div> 
+       <a  href="index.html"><i class="fa fa-fw fa-home"></i> Home</a> </div> 
     <div class='navi-left'>
     <span  onclick="openNav()" style='cursor:pointer'>hi life !</span>
     </div></div></div>
@@ -413,13 +412,13 @@ a.intro:hover, a.intro:active { background-color: red;}
  
 <div class="bmi ">
   <div class="bmi-box">
-  <p>BMI Calculator</p>
+  <p style="margin:10px 0px;text-align:center; font-weight:bolder; font-size: 25px; color:#000000;">BMI Calculator</p>
  
-  <p>Give Your Height (in cm)</p>
+  <p style="margin:10px 0px ; font-weight:500 ; font-size:16px; color:#020202;">Give Your Height (in cm)</p>
  
   <input type="text" id="height-index">
  
-  <p>GIve Your Weight (in kg)</p>
+  <p style="margin:10px 0px ; font-weight:500 ; font-size:16px; color:#020202;">Give Your Weight (in kg)</p>
  
   <input type="text" id="weight-index">
  
@@ -473,45 +472,41 @@ a.intro:hover, a.intro:active { background-color: red;}
  </script>
  
 <div class="main">
-	<div class='color'> <h1> Bookmarks</h1> </div>
+	
 
-<h2>MEASURING BMI</h2>
-<h3></h3>
- 
+  <div style="font-weight:bold;font: italic 1.2em Fira Sans;"> <h1> Bookmarks</h1> </div>
+
+  
+ <div class="boxforbookmarks">
 		<p><a class='style-for-font' href='#C1'> I.What is BMI?</a></p>
 		<p> <a  class='style-for-font' href='#C2'> II.Range</a></p> 
 		
 		<a  class='style-for-font' href='#C3'> IV.Health risks</a></button>
 			<div class='panel' >  <ul> 
-				<p>Underweight</p>
-				<p>Overweight</p> 
+				<p style="margin-left:20px; font-family: Georgia; font-size: 20px; color:#b98412; ">+ Underweight</p>
+        <p style="margin-left:20px; font-family: Georgia; font-size: 20px; color:#b98412; ">+ Overweight</p> 
    			 </ul></div>
 		<p><a  class='style-for-font' href='#C4'>IV.Solution</a></p>
-	
-<hr>
+	</div>
+  
+     
 
 
 
-
-
-<br id='C1'><br><br><br>
+<br id='C1'> 
+<br>
+ 
 <p  class='style-for-font' >I. What is BMI?</p>
 <p ><b>The body mass index (BMI)</b> is a measure that uses your height and weight to work out if your weight is healthy.
 <a   href='https://www.nhs.uk/common-health-questions/lifestyle/what-is-the-body-mass-index-bmi/' target='_blank'> According to NHS</a></p>
 
 
- 
 
-<br>
-<p><a class='intro' href='https://www.nhs.uk/common-health-questions/lifestyle/what-is-the-body-mass-index-bmi/' target='_blank'> it was just a normal button</a></p>
-<p >
-&#128512; &#128516; &#128525; &#128151;
-</p>
-<br>
 
+<br id='C2'> <br>
 <p  class='style-for-font' >II. Range</p>
-<table id='C2'>
-<caption> BODY MASS INDEX</caption>
+<table  >
+<caption style="margin-bottom:10px;margin-top:-10px;font:29px"> BODY MASS INDEX</caption>
   <tr style='height:40px'>
     <th style='width:60%' >BMI</th>
     <th>Weight Categories</th>
@@ -535,23 +530,45 @@ a.intro:hover, a.intro:active { background-color: red;}
     <th>Obese Class II</th>
     <td>35.0 - 39.9</td>  
   </tr>
- <tr>
+ <tr >
     <th>Obese Class III</th>
     <td>> 40.0</td>
   </tr>
 </table>
-<p></p>
+<p ></p>
 
  
- 
-<p  class='style-for-font'  id='C3'>IV. Health risks</p>
-<ul >
-	<li>Underweight</li>
- 
-	<li>Overweight</li>
- </ul>
+<br id='C3'> <br>
+<p  class='style-for-font'  >IV. Health risks</p>
+<div>
+  <p style="margin-left:20px; font-family: Georgia; font-size: 20px; color:#b98412; ">1. Underweight</p>
+  <p style=" margin: 0px 20px 0 px 0px ;font-family: Georgia; font-size: 18px; color:#070707;"> According to <a  href='https://www.medicalnewstoday.com/articles/321612#risks' target='_blank'>MedicalNewsToday.</a>  Not all people who are underweight experience adverse side effects or symptoms from being underweight. However, some people, experience the following symptoms related to being underweight:
 
-<p class='style-for-font' id='C4'  ><b> V.Solution</b></p>
+    <br><br><b>Osteoporosis:</b> According to a 2016 studyTrusted Source, being underweight increases a woman's risk of osteoporosis, which is where the bones are brittle and more prone to breaking.
+    <br><br> <b> Skin, hair, or teeth problems:</b> If a person does not get enough nutrients in their daily diet, they may display physical symptoms, such as thinning skin, hair loss, dry skin, or poor dental health.
+    <br><br><b>Getting sick frequently: </b>If a person does not get enough energy from their diet to maintain a healthy body weight, they may also not be getting enough nutrients to fight off infections. As a result, a person may get sick more frequently, and common illnesses, such as a cold, can last longer than they usually would.
+    <br><br><b>Feeling tired all the time: </b>Calories are a measurement of the energy a particular food can give a person. Not getting enough calories to maintain a healthy weight can make a person feel fatigued.
+    <br><br><b>Anemia: </b>A person who is underweight is more likely to have low blood counts, known as anemia, which causes dizziness, headaches, and fatigue.
+    <br><br><b>Irregular periods:</b> Women who are underweight may not have regular periods, they may find menstruation stops, or an adolescent's first period may be delayed or absent. Irregular or absent menstruation can cause infertility.
+    <br><br><b>Premature births:</b> According to a study published in An International Journal of Obstetrics & GynaecologyTrusted Source, a woman who is pregnant and underweight is at a higher risk for pre-term labor, which means having a baby before 37 weeks.
+    <br><br><b>Slow or impaired growth:</b> Young people need nutrients to grow and develop healthy bones. Being underweight and not getting enough calories could mean a person may not develop as expected. Doctors call this a 'failure to thrive'.
+    <br><br>According to a study published in the journal BMC Public HealthTrusted Source, being underweight is associated with an increased risk for mortality when compared to people with an average BMI. The researchers suggested that being underweight may impair a person’s healing processes following an accident or trauma compared to a person with an average BMI.</p>
+  
+  <p style="  margin-left:20px; font-family: Georgia; font-size: 20px; color:#b98412;">2. Overweight</p>
+  <p style=" margin: 0px 20px 0 px 0px ;font-family: Georgia; font-size: 18px; color:#070707;"> According to <a  href='https://www.niddk.nih.gov/health-information/weight-management/adult-overweight-obesity/health-risks' target='_blank'>NIDDK.</a>  Not all people who are underweight experience adverse side effects or symptoms from being underweight. However, some people, experience the following symptoms related to being underweight:
+
+    <br><br><b>Type 2 diabetes:</b> Type 2 diabetes is a disease that occurs when your blood glucose, also called blood sugar, is too high. About 8 out of 10 people with type 2 diabetes are overweight or have obesity. Over time, high blood glucose leads to problems such as heart disease, stroke, kidney disease, eye problems, nerve damage, and other health problems.
+    <br><br> <b> High blood pressure:</b> High blood pressure, also called hypertension, is a condition in which blood flows through your blood vessels with a force greater than normal. High blood pressure can strain your heart, damage blood vessels, and raise your risk of heart attack, stroke, kidney disease, and death.
+    <br><br><b>Heart disease: </b>. If you have heart disease, you may have a heart attack, heart failure, sudden cardiac death, angina
+    <br><br><b>Stroke:</b> A stroke can damage brain tissue and make you unable to speak or move parts of your body. High blood pressure is the leading cause of strokes.
+    <br><br><b>Sleep apnea:</b> Sleep apnea is a common disorder in which you do not breathe regularly while sleeping. You may stop breathing altogether for short periods of time. Untreated sleep apnea may raise your risk of other health problems, such as type 2 diabetes and heart disease.
+    <br><br><b>Fatty liver diseases:</b> According to a study published in An International Journal of Obstetrics & GynaecologyTrusted Source, a woman who is pregnant and underweight is at a higher risk for pre-term labor, which means having a baby before 37 weeks.
+    <br><br><b>Some cancers:</b> Overweight and obesity may raise your risk of developing certain types of cancer.
+    <br><br><b>Gallbladder diseases:</b> Overweight and obesity may raise your risk of getting gallbladder diseases, such as gallstones and cholecystitis. Imbalances in substances that make up bile cause gallstones. Gallstones may form if bile contains too much cholesterol.
+    <br><br><b>Osteoarthritis:</b>Osteoarthritis is a common, long-lasting health problem that causes pain, swelling, and reduced motion in your joints. Being overweight or having obesity may raise your risk of getting osteoarthritis by putting extra pressure on your joints and cartilage.
+</div>
+ <br id='C4'> <br>
+<p class='style-for-font'   >V.Solution</p>
 <figure ><img src='https://www.foodbusinessnews.net/ext/resources/FBN-Features/5/TopDietsChart2_Embedded.jpg' alt="Popular Diet For Weight Loss" usemap='#diet' width="500" height="400"  title='click into the diet you want to have more informaion about' >
 	<map name='diet'>
 	<area shape='rect' coords='40,80,140,200' alt='Intermittent Fasting' href='https://www.hopkinsmedicine.org/health/wellness-and-prevention/intermittent-fasting-what-is-it-and-how-does-it-work' target='_blank'>
@@ -563,6 +580,9 @@ a.intro:hover, a.intro:active { background-color: red;}
 	<br>
 	<figcation>Source: <a  href='https://www.foodbusinessnews.net/articles/11838-ific-survey-36-of-americans-follow-a-specific-diet' target='_blank'>Foods Business News</a></figcaption></figure>
  
+ 
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </div>
 </div>
 </div></div>
