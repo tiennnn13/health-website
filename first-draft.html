@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html >
+<head>
+<title> BMI CALCULATOR </title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">/*my icon*/
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">/*icons for navigational bar*/
+<style>
+ /*responsive navigator*/
+ .navi {z-index:7;list-style-type: none ;padding: 0px;background-color:white; position: fixed; top: 0; width:101.5%;margin-left:-1.5% ;height: 43px; }
+ .navi-right a {font-size: 20px;font-weight: bold; color: black; ;padding: 10px; ;text-decoration: none;text-align: left;display: block;overflow:auto;}
+ .navi-right a:hover {font-weight: bold; background-color: grey; color: red;}
+ .navi-right a{float:right;}
+ .navi a.this-one-is-active { background-color: black;  color: white;}
+.navi-left{margin-left:20px;font:30px Arial; color:orange; font-family: Century Gothic;font-weight:bold}
+
+/*dropdown navigator*/
+.dropdown {position: relative; display: block;height:43px;}
+
+.insidedropdown {background-color: orange;display: none ;position: absolute; box-shadow: 10px 10px 16px 0px rgba(0,0,0,1); z-index: 3;width: px ;padding:0px;margin-top:-4px;}
+.insidedropdown a {
+  color: black;
+  padding-right:px;
+  text-decoration: none;
+  display: block;font-size:18px;  ;
+}
+.insidedropdown a:hover {font-weight: bold; background-color: yellow; color: black;}
+
+.dropdownbutton{border:none;background-color:white;font-size: ; margin-left: ;padding:0px;}
+ 
+.show-discover {display: block;}
+.button-discover{padding:0px;}
+
+ @media only screen  and (min-width: 1300px){
+div.body_except_navi{margin-left:10%;margin-right:10%} ;div.banner{margin-left:0 cm;margin-right: 0cm;}}
+
+
+body{background-color:#FFDB73;font-family: Arial;margin:0px}
+
+.body_except_navi{margin-left:0px;margin-right:0px;margin-top:0px;}
+
+.header {margin-bottom:30px;margin-left: %;margin-right: %;text-align:center; padding-top:10px; padding-bottom:10px; font-family: sans-serif; font-size:55px; font-weight:bold; color: #fff;background-color:orange;}
+
+
+.view a { color: orange; font-family: sans-serif; font-size: 30px; transition: linear; font-weight: bold;padding-bottom: 30px;text-align: center;}
+.view a:hover {    color:black;}
+
+
+
+
+.flexbox{     list-style-type: none;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;display: flex; flex-wrap: wrap; gap:60px ; align-items: center; flex-direction: row;overflow:visible;} /*careful with row cause just puit random*/
+
+
+
+ .inner {   
+    background-color: #fff0e6;
+    padding: 15px;   cursor: pointer; margin: 0px ; width:220px; height:200px;transition: padding 0.2s;}
+
+ .inner:hover { background-color: orange; }
+ 
+ .img-news img{display:block; width:190px; height:130px ;margin-bottom: 10px;margin-left:auto ;margin-right:auto;transition: height 1s ;transition: width 1s }
+  .img-news img:hover  {display:block; width:208px; height:150px ;margin-bottom: 10px;margin-left:auto ;margin-right:auto;}
+
+
+/* animated banner*/
+.banner {overflow: hidden; background: white ;margin-left: %;margin-right:%; width: 100%;left:0%}
+.banner-move { animation: name-of-animation linear/*same speed*/ 20s infinite; }
+.banner-move{ display: flex ;}
+.banner-move:hover { color:orange}
+.hitem { margin-top:10px;margin-bottom:10px; flex-shrink: 0 /*lay all of the items out in a long horizontal row*/ ; width: 100%; ; box-sizing: border-box;  padding: 30 px;  text-align: center;}
+ 
+ 
+@keyframes name-of-animation{
+  0% /* the same as from*/ { transform: translate3d(100%, 0, 0); }
+  100% /* the same as to*/ { transform: translate3d(-300%, 0, 0); }
+}
+
+
+.hidden { height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0; background-color: rgba(0,0,0, 0.6);
+  overflow-y: hidden;
+  transition: 1s;
+}
+
+.hidden-content {
+  position: relative;
+  top: 20%;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;}
+
+.hidden a { padding: 8px; text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.hiddentext:hover{color: #f1f1f1}
+
+.welcometohilife:hover{color:orange}
+
+
+/* slideshow  https://linuxhint.com/create-image-slider-using-javascript/  */
+.imageSlides {display: none}
+ 
+.image_of_the_slideshow  img{ display: block;  background-position: center; background-repeat: no-repeat;
+     width: 100%;height:400px; 
+      }
+ 
+  
+.theslideshow {margin-left:  ; margin-right: %; margin-top:%;
+  position: relative;
+  margin-left:  ;background-position: center;}
+ 
+ 
+.slider-btn{
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  
+  padding: 8px 16px;
+  margin-top: -22px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 18px; 
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+ 
+ 
+.go-back { left: 1%;} 
+.go-forth{right: 1%;}
+ 
+.go-back:hover,.go-forth:hover {  color: rgb(255, 253, 253);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+
+
+
+
+
+
+  .dot {  cursor: pointer; height: 16px; width: 16px; margin: 6px; background-color: grey; border-radius: 50%;
+   display:none  ;
+
+  transition: background-color 0.6s ease; transition:display 5s ease;}
+
+.dot_position{ position: absolute  ; z-index:2; ; text-align: center;margin-top:-40px;left: 48%;}
+
+.active, .dot:hover {
+  background-color: white;
+ 
+</style>
+</head>
+
+<body > 
+<!--full_screen_navigation--!>
+<div id="full_screen_navigation" class="hidden">
+    <a   class='hiddentext' style=' position: absolute;top: 20px;right: 45px; font-size: 60px; cursor:pointer;' onclick="closeNav()">&times;</a>
+  
+<div class="hidden-content">
+     <a  class='welcometohilife' href="#"> Welcome to Hi life!</a>
+  </div></div>
+
+<script>
+function openNav() {
+  document.getElementById("full_screen_navigation").style.height = "100%";
+const a=document.querySelectorAll('.dot');
+a.forEach(dot => {dot.style.display='none';});
+ 
+}
+
+function closeNav() {document.getElementById("full_screen_navigation").style.height= "0%";
+
+const a=document.querySelectorAll('.dot');
+a.forEach(dot => {dot.style.display='inline-block';});}
+
+ 
+ 
+</script>
+<div class='navi'>
+<div class='navi-right'>
+   <a href="#about"> <i class="fa fa-user-o" aria-hidden="true"></i> About</a> 
+    <a href="htmlwebsite-knowledge.html"><i class="fa fa-book" aria-hidden="true"></i> Knowledge</a>  
+ 
+    
+<div class='dropdown' style='float:right'>
+  <button onclick="drop()" style='border:non ' class='dropdownbutton '  > <a href="##"><i class="fa fa-search" aria-hidden="true"></i> Discover <i class="fa fa-caret-down"></i></a></button>
+  <div id="dropdown-discover" class="insidedropdown">
+    <a href="#">BMI Calculator</a>
+    <a href="#">BMI Calculator</a>
+    <a href="#">BMI Calculator</a>
+  </div>
+</div>
+<a href="htmlwebsite-search.html"><i class="fa fa-search" aria-hidden="true"></i> Search </a> 
+   <a class='this-one-is-active' href="#home"><i class="fa fa-fw fa-home"></i> Home</a> </div> 
+<div class='navi-left'>
+<span  onclick="openNav()" style='cursor:pointer'>hi life !</span>
+</div></div></div>
+<script>
+ function drop() {
+  document.getElementById("dropdown-discover").classList.toggle("show-discover");
+}
+</script>
+ 
+</nav>
+
+
+<div class='body_except_navi'>
+<nav> 
+<div class='image_of_the_slideshow '>
+
+<div class=" theslideshow">
+        <div class="imageSlides ">
+            <img src="https://static.vecteezy.com/system/resources/previews/001/226/748/original/colorful-sunset-sky-free-photo.jpg">
+        </div>
+        <div class="imageSlides ">
+            <img src="https://4kwallpapers.com/images/wallpapers/sunset-tropical-trees-silhouette-dawn-warm-3840x2160-2548.jpg">
+        </div>
+        <div class=" imageSlides ">
+            <img src="https://images.squarespace-cdn.com/content/v1/5a7a09591f318d0b3c459fd8/1611357464510-4FL3EDOC7T4N7W3X1E1I/Diabetes-symptoms.jpg">
+        </div>
+ 	<div class="imageSlides ">
+            <img src="https://static.vecteezy.com/system/resources/previews/001/226/748/original/colorful-sunset-sky-free-photo.jpg">
+        </div>
+        <a class="slider-btn go-back" onclick="setSlides(-1)"><</a>
+        <a class="slider-btn go-forth" onclick="setSlides(1)">></a>
+</div>
+
+
+
+<div   class="dot_position">
+  <div   id="dot_dis" class="dot"  onclick="current_slide_by_dot(1)"></div> 
+  <div  id="dot_dis"  class="dot"  onclick="current_slide_by_dot(2)"></div> 
+  <div  id="dot_dis" class="dot"  onclick="current_slide_by_dot(3)"></div> 
+<span class="dot" onclick="current_slide_by_dot(4)"></div> 
+</div>
+
+
+<script>
+
+var currentIndex = 1;
+displaySlides(currentIndex);
+
+<!--change the index by on click dot--!>
+function current_slide_by_dot(num)
+{displaySlides(currentIndex=num);}
+
+function displaySlides(num) {
+    var x;
+    var slides = document.getElementsByClassName("imageSlides");
+    if (num > slides.length) { currentIndex = 1 }
+    if (num < 1) { currentIndex = slides.length }
+    for (x = 0; x < slides.length; x++) {
+        slides[x].style.display = "none";
+    }
+    slides[currentIndex - 1].style.display = "block";
+ let dots = document.getElementsByClassName("dot");
+ for (x = 0; x < dots.length; x++) {
+    dots[x].className = dots[x].className.replace(" active", "");
+  }
+  slides[currentIndex-1].style.display = "block";  
+  dots[currentIndex-1].className += " active";
+}
+
+function setSlides(num) {
+    displaySlides(currentIndex += num);
+}
+</script>
+
+
+
+
+ <div class="banner"><div class="banner-move">
+  <div class="hitem">No time for your health today, <br />
+No health for your time tomorrow.      </div>
+  <div class="hitem">g g g g g g g g g g gdbvdfb fbfdgb fbdbfdbd dbdbdb .</div>
+  <div class="hitem">1234 4332 4566 4443 44 3 34 3444 434 34454 4444 .</div>
+</div></div>
+
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown_filter
+<header id='1' class='header'> BLOGS</header>
+<div class='flexbox'>
+ <div class="inner">
+
+           <div class="img-news"> <a target='_blank' href="https://www.cdc.gov/diabetes/basics/insulin-resistance.html"><img alt="Insulin Resistance and Diabetes" src="https://images.everydayhealth.com/images/diabetes-awareness-month-1440x810.jpg" ></a> </div>
+     <p>Insulin Resistance and Diabetes <p>
+</div>
+     
+
+
+ <div class="inner">
+
+           <div class="img-news"> <a  target='_blank' href="https://www.cdc.gov/diabetes/basics/insulin-resistance.html"><img alt="Insulin Resistance and Diabetes" src="https://images.everydayhealth.com/images/diabetes-awareness-month-1440x810.jpg" ></a> </div>
+         	 <p> Insulin Resistance and Diabetes <p>
+</div>
+     
+<div class="inner ">
+
+           <div class="img-news"> <a target='_blank' href="https://www.cdc.gov/diabetes/basics/insulin-resistance.html"><img alt="Insulin Resistance and Diabetes" src="https://images.everydayhealth.com/images/diabetes-awareness-month-1440x810.jpg"></a> </div>
+         	<p> Insulin Resistance and Diabetes <p>
+</div>
+<div class="inner ">
+
+           <div class="img-news"> <a target='_blank' href="https://www.cdc.gov/diabetes/basics/insulin-resistance.html"><img alt="Insulin Resistance and Diabetes" src="https://images.everydayhealth.com/images/diabetes-awareness-month-1440x810.jpg"></a> </div>
+         
+           <p> Insulin Resistance and Diabetes <p>
+</div>
+
+
+ <div class="inner ">
+
+           <div class="img-news"> <a target='_blank' href="https://www.cdc.gov/diabetes/basics/insulin-resistance.html"><img alt="Insulin Resistance and Diabetes" src="https://images.everydayhealth.com/images/diabetes-awareness-month-1440x810.jpg"></a> </div>
+         
+           <p> Insulin Resistance and Diabetes <p>
+</div>
+</div>
+
+
+<div class="view">
+      <a href="#1">VIEW ALL BLOGS</a> </div>
+ 
+
+
+
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+ 
+<header id='2' class='header'> VIDEOS</header>
+
+
+<input type="text" id="search" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+<ul class='flexbox' id='idname'>
+
+  	<div class='inner'>
+<li>
+   
+    <a href="https://www.cdc.gov/diabetes/basics/insulin-resistance.html"> <div class='img-news'><img src="https://images.everydayhealth.com/images/diabetes-awareness-month-1440x810.jpg" ></div>Insulin Resistance and Diabetes</a></li></div>
+       <div class='inner'>
+<li>
+    <div class='img-news'><img src="https://images.everydayhealth.com/images/diabetes-awareness-month-1440x810.jpg" ></div>
+    <a href="https://www.cdc.gov/diabetes/basics/insulin-resistance.html">a</a></li></div>
+       <div class='inner'>
+<li>
+    <div class='img-news'><img src="https://images.everydayhealth.com/images/diabetes-awareness-month-1440x810.jpg" ></div>
+    <a href="https://www.cdc.gov/diabetes/basics/insulin-resistance.html">b</a></li></div>
+       <div class='inner'>
+<li>
+    <div class='img-news'><img src="https://images.everydayhealth.com/images/diabetes-awareness-month-1440x810.jpg" ></div>
+    <a href="https://www.cdc.gov/diabetes/basics/insulin-resistance.html">c</a></li></div>
+       <div class='inner'>
+<li>
+    <div class='img-news'><img src="https://images.everydayhealth.com/images/diabetes-awareness-month-1440x810.jpg" ></div>
+    <a href="https://www.cdc.gov/diabetes/basics/insulin-resistance.html">d</a></li></div>
+       
+ 
+
+</ul> 
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("search");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("idname");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+ 
+</div>
+</div>
+
+</body>
+</html>

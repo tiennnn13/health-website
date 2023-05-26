@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html >
+<head>
+<title> BMI CALCULATOR </title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style> 
+.bmr-calculator {
+  max-width: 300px;
+  font-family: "Roboto", sans-serif;
+  padding: 8px 24px;
+  box-shadow: 0 4px 8px -3px rgba(0, 0, 0, 0.3);
+}
+
+.bmr-calculator,
+.bmr-calculator * {
+  box-sizing: border-box;
+}
+
+.bmr-calculator h2 {
+  text-align: center;
+  background: #222;
+  color: #fff;
+  font-weight: 100;
+  margin: -8px -24px;
+  margin-bottom: 8px;
+  padding: 16px;
+}
+
+.bmr-calculator form h3 {
+  font-size: 15px;
+  text-transform: uppercase;
+  margin: 16px 0 10px 0;
+}
+
+.bmr-calculator form input[type="text"] {
+  width: 100%;
+  padding: 4px 16px;
+  font-size: 24px;
+  font-weight: bold;
+  border: 1px solid #d5dbdd;
+}
+
+.bmr-calculator form input[type="text"].invalid {
+  border: 1px solid red;
+}
+
+.bmr-calculator form {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bmr-calculator form #female {
+  margin-left: 20px;
+}
+
+.bmr-calculator form .height,
+.bmr-calculator form .weight {
+  position: relative;
+}
+
+.bmr-calculator form .unit {
+  position: absolute;
+  right: 20px;
+  top: 50px;
+  color: #777;
+}
+
+.bmr-calculator .result .calculate-btn {
+  padding: 8px 24px;
+  margin: 16px 0;
+  font-size: 18px;
+  font-weight: 100;
+  text-transform: uppercase;
+  border: none;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 32px;
+}
+
+.bmr-calculator .result {
+  text-align: center;
+  color: #4e4e4e;
+  font-size: 18px;
+}
+
+.bmr-calculator .result .calories {
+  color: green;
+  font-size: 38px;
+  font-weight: 900;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.bmr-calculator .result .error-message {
+  color: red;
+  font-size: 14px;
+  display: none;
+}
+
+.bmr-calculator .result .error-message.active {
+  display: block;
+}
+</style>
+</head>
+
+<body > 
+ <div class="bmr-calculator">
+      <h2>BMR Calculator</h2>
+      <div class="controls">
+        <form>
+          <h3>Age (10 - 100)</h3>
+          <input type="text" id="age" value="28" />
+
+          <div class="gender">
+            <h3>Gender</h3>
+            <input type="radio" id="male" value="male" name="gender" checked />
+            <label for="male">Male</label>
+            <input type="radio" id="female" value="female" name="gender" />
+            <label for="female">Female</label>
+          </div>
+
+          <div class="height">
+            <h3>Height</h3>
+            <input type="text" id="height" value="180" />
+            <div class="unit">cm</div>
+          </div>
+
+          <div class="weight">
+            <h3>Weight</h3>
+            <input type="text" id="weight" value="65" />
+            <div class="unit">kg</div>
+          </div>
+        </form>
+      </div>
+
+      <div class="result">
+        <button class="calculate-btn">Calculate</button>
+
+        <div class="result-message">
+          <span class="calories">1,640</span> Calories/day
+        </div>
+
+        <div class="error-message">
+          <p>Please enter all the details correctly.</p>
+        </div>
+      </div>
+    </div>
+
+    <script >
+const calories = document.querySelector(".bmr-calculator .result .calories");
+const calculateBtn = document.querySelector(
+  ".bmr-calculator .result .calculate-btn"
+);
+const age = document.querySelector(".bmr-calculator form #age");
+const height = document.querySelector(".bmr-calculator form #height");
+const weight = document.querySelector(".bmr-calculator form #weight");
+const errorMessage = document.querySelector(
+  ".bmr-calculator .result .error-message"
+);
+
+// BMR = 10*weight + 6.25*height - 5*age + 5
+// BMR = 10*weight + 6.25*height - 5*age - 161;
+
+const calculateBMR = (weight, height, age, gender) => {
+  if (gender == "male") {
+    return 10 * weight + 6.25 * height - 5 * age + 5;
+  }
+
+  return 10 * weight + 6.25 * height - 5 * age - 161;
+};
+
+calculateBtn.addEventListener("click", () => {
+  if (
+    age.classList.contains("invalid") ||
+    height.classList.contains("invalid") ||
+    weight.classList.contains("invalid")
+  ) {
+    errorMessage.classList.add("active");
+    return;
+  }
+
+  errorMessage.classList.remove("active");
+
+  let genderValue = document.querySelector(
+    ".bmr-calculator form input[name='gender']:checked"
+  ).value;
+
+  let BMR = calculateBMR(weight.value, height.value, age.value, genderValue);
+
+  calories.innerHTML = BMR.toLocaleString("en-US");
+});
+
+// Input Validation
+
+age.addEventListener("input", (e) => {
+  let ageValue = e.target.value;
+
+  if (!ageValue || isNaN(ageValue) || ageValue < 10 || ageValue > 100) {
+    age.classList.add("invalid");
+  } else {
+    age.classList.remove("invalid");
+  }
+});
+
+height.addEventListener("input", (e) => {
+  let heightValue = e.target.value;
+
+  if (!heightValue || isNaN(heightValue) || heightValue < 0) {
+    height.classList.add("invalid");
+  } else {
+    height.classList.remove("invalid");
+  }
+});
+
+weight.addEventListener("input", (e) => {
+  let weightValue = e.target.value;
+
+  if (!weightValue || isNaN(weightValue) || weightValue < 0) {
+    weight.classList.add("invalid");
+  } else {
+    weight.classList.remove("invalid");
+  }
+});
+
+</script>
+  </body>
+</html>
