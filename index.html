@@ -4,17 +4,17 @@
   <meta name="viewport" width="device-width">
   
 <title> Tien's project </title>
-<link rel="icon" type="image/x-icon" href="favicon.ico">/*my icon*/
+<link rel="icon" type="image/x-icon" href="favicon.ico"> 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">/*icons for navigational bar*/
 <style>
  /*responsive navigator*/
  .navi {z-index:7;list-style-type: none ;padding: 0px;background-color:black; position: fixed; top: 0; width:100%;margin-left: 0% ;height: 53px;padding-right:20px; }
  .navi-right a {font-size: 20px;font-weight:700; color: white; ;padding: 15px; ;text-decoration: none;text-align: left;display: block;overflow:auto;background-color: #000000;}
- .navi-right a:hover {font-weight: 700;  color:#ff603b; border-bottom: solid 1px #ff603b ; }
+ .navi-right a:hover {font-weight: 700;  color:#ff8204;; border-bottom: solid 1px #ff8204; ; }
  .navi-right a{float:right;}
- .navi a.this-one-is-active { background-color: #ff603b;  color: white; height: px}
-.navi-left{margin-left:60px; font-family:"Fira Sans","Lucida Console";font-size: 40px; color:orange; font-family: Century Gothic;font-weight:bold}
+ .navi a.this-one-is-active { background-color: #ff8204;;  color: white; height: px}
+.navi-left{margin-left:60px; font-family:"Fira Sans","Lucida Console";font-size: 40px; color:#ff8204;; font-family: Century Gothic;font-weight:bold}
 
 /*dropdown navigator*/
 .dropdown {position: relative; display: block;height:43px;}
@@ -23,12 +23,12 @@
   overflow: hidden;
   position: absolute;  ; z-index: 3; ;width: 200px ;  ;margin-top:-4px;}
 .insidedropdown a {
-  color: black;background-color: #ffb5ad;
+  color: black;background-color: #ffb011;
   padding-right:px;
   text-decoration: none; float:none;
   display: block;font-size:18px; text-align:center ;
 }
-.insidedropdown a:hover {border-bottom:none;font-weight: bold; background-color: pink; color: black;}
+.insidedropdown a:hover {border-bottom:none;font-weight: bold; background-color: rgb(255, 255, 255); color: black;}
 
 .dropdownbutton{border:none;background-color:black;font-size: ; margin-left: ;padding:0px;}
  
@@ -37,7 +37,7 @@
 
 
 /* body*/
-body{ cursor: context-menu;background-color:#fff3f1fa;font-family: "Proxima Nova","Proxima Nova Fallback",sans-serif;margin-right:0px;margin-left:0px;margin-top:0px;margin-bottom:0px;}
+body{ cursor: context-menu;background-color:#fbf2b3fa;font-family: "Proxima Nova","Proxima Nova Fallback",sans-serif;margin-right:0px;margin-left:0px;margin-top:0px;margin-bottom:0px;}
 
 .body_except_navi{margin-left:0px;margin-right:0px;margin-top:0px;padding: 0;
     display: block;
@@ -47,8 +47,8 @@ body{ cursor: context-menu;background-color:#fff3f1fa;font-family: "Proxima Nova
 .flex-viewall{     list-style-type: none; margin-block-start: 0px;margin-block-end: 0px;margin-inline-start: 0px;margin-inline-end: 0px; padding-inline-start: 0px;
 display: flex;align-items: center;border-bottom: solid 2px #dcdbdb;justify-content: space-between; ;margin-bottom:; }
 
-.header {  font-family: "Proxima Nova","Proxima Nova Fallback",sans-serif;  font-size:30px;
- font-weight:bold; color:#ff603b;  ;justify-content: space-between;}
+.header {  font-family: "Proxima Nova","Proxima Nova Fallback",sans-serif;  font-size:33px;
+ font-weight:bold; color:#ff8204;  ;justify-content: space-between;}
 
  .viewall{font-weight: 700; font-family: "Proxima Nova","Proxima Nova Fallback",sans-serif;  font-size:15px;border-bottom: solid 0.1px #51bfc1;
  ; color:#51bfc1;padding-bottom:1px; margin-bottom:10px;  cursor: pointer;}
@@ -80,16 +80,16 @@ display: flex;align-items: center;border-bottom: solid 2px #dcdbdb;justify-conte
 
  ::-webkit-scrollbar-thumb {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
- background-color: #f97a6c; scrollbar-width:thin; border:   ;  box-sizing: border-box;}
- ::-webkit-scrollbar-thumb:hover { background:#f48f78;}    
+ background-color: #ffd797; scrollbar-width:thin; border:   ;  box-sizing: border-box;}
+ ::-webkit-scrollbar-thumb:hover { background:#ff8204;}    
  
   
 /* animated banner*/
-.banner {overflow: hidden; background:rgb(255, 221, 221) ;margin-left:0%;margin-right:0%; width: 100%;left:0%;}
+.banner {overflow: hidden; background:rgba(85, 221, 255, 0.648) ;margin-left:0%;margin-right:0%; width: 100%;left:0%;}
 .banner-move { animation: name-of-animation linear/*same speed*/ 20s infinite; }
 .banner-move{ display: flex ;}
 .hitem { margin-top:5px;margin-bottom:5px; font-size:18px;flex-shrink: 0 /*lay all of the items out in a long horizontal row*/ ; width: 100%; ; box-sizing: border-box;  ;  text-align: center;}
- .hitem:hover{color:rgb(240, 44, 109);}
+ .hitem:hover{font-style: italic;}
  
 @keyframes name-of-animation{
   0% /* the same as from*/ { transform: translate3d(100%, 0, 0); }
@@ -112,23 +112,23 @@ display: flex;align-items: center;border-bottom: solid 2px #dcdbdb;justify-conte
 
 .hidden a{ padding:0px 0px 0px 0px; text-decoration: none;
   font-size: 36px;
-  color: #818181;
+  color:#020202;font-weight: bold;
   display: block;
   transition: 0.5s;
 }
 .hiddentext:hover{color: #f1f1f1}
 
-.welcometohilife:hover{color:#fd8177}
-.style-popup{display:block; height: 500px;  top: 50%;
+.welcometohilife:hover{color:#ff8204;} 
+.style-popup{display:block; height: 450px;  top: 50%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-  ;width: 500px ; 
+  ;width: 550px ; 
   z-index: 4; 
   overflow-y: hidden;
   transition: 1s;position: fixed;background: #FFFFFF;
 		padding: 30px;
-		border-radius: 10px ;   ;border: 10px solid red; ;padding : 10px;
+		border-radius: 10px ;   ;border: 10px solid #ff8204;; ;padding : 5px;
 		box-shadow: 4px 4px 10px 0px rgba(#000000, 0.6);}
 
 
@@ -243,45 +243,61 @@ display: flex;align-items: center;border-bottom: solid 2px #dcdbdb;justify-conte
              
 }
   
-  
+@media   screen  and (min-width: 2110px){
+.body_except_navi{margin-left:25%;margin-right:25%} 
+.imgstyle{  height: ;width: 70;}}
 
-  @media   screen  and (min-width: 1900px){
+  @media   screen  and (max-width: 2100px){
 .body_except_navi{margin-left:23%;margin-right:23%} 
- 
-.imgstyle{  height: ;width: 670px;}}
+.imgstyle{  height: ;width: 710px;}}
+
+
+@media   screen  and (max-width: 2000px){
+.body_except_navi{margin-left:21%;margin-right:21%} 
+.imgstyle{  height: ;width: 700px;}}
   
-   @media   screen  and (max-width: 1900px){
-.body_except_navi{margin-left:20%;margin-right:20%} 
- 
-.imgstyle{  height: ;width: 630px;}}
+  
+@media   screen  and (max-width: 1900px){
+.body_except_navi{margin-left:21%;margin-right:21%} 
+.imgstyle{  height: ;width: 680px;}}
 
- 
+@media  screen  and  (max-width:1800px){
+.body_except_navi{margin-left:20%;margin-right:20%}
+.imgstyle{  height: ;width: 670px;}} 
 
-@media  screen  and  (max-width:1600px){
-.body_except_navi{margin-left:15%;margin-right:15%}
- 
-.imgstyle{  height: ;width: 680px;}} 
 
-@media  screen  and  (max-width:1500px){
-.body_except_navi{margin-left:15%;margin-right:15%}
- 
+@media  screen  and  (max-width:1700px){
+.body_except_navi{margin: left 19%;margin-right:19%}
 .imgstyle{  height: ;width: 650px;}} 
 
 
-@media  screen  and (max-width: 1400px) {
-.body_except_navi{margin-left:15%;margin-right:15%} 
- 
-.imgstyle{  height: ;width: 620px;}}
+@media  screen  and  (max-width:1600px){
+.body_except_navi{margin-left:17%;margin-right:18%}
+.imgstyle{  height: ;width: 640px;}} 
+
+@media  screen  and  (max-width:1500px){
+.body_except_navi{margin-left:15%;margin-right:15%}
+.imgstyle{  height: ;width: 660px;}} 
+
+@media  screen  and (max-width: 1460px) {
+.body_except_navi{margin-left:14.5%;margin-right:14.5%} 
+.imgstyle{  height: ;width: 650px;}}
+
+@media  screen  and (max-width: 1410px) {
+.body_except_navi{margin-left:13%;margin-right:13%} 
+.imgstyle{  height: ;width: 640px;}}
 
 @media  screen  and (max-width: 1360px) {
 .body_except_navi{margin-left:13%;margin-right:13%} 
- 
-.imgstyle{  height: ;width: 600px;}}
+.imgstyle{  height: ;width: 620px;}}
 
-@media  screen  and (max-width: 1300px) {
-  .body_except_navi{margin-left:10%;margin-right:10%} 
- 
-.imgstyle{ height:400px;width:  px;}}
+@media  screen  and (max-width: 1320px) {
+.body_except_navi{margin-left:13%;margin-right:13%} 
+.imgstyle{  height: ;width: 620px;}}
+
+@media  screen  and (max-width: 1280px) {
+  .body_except_navi{margin-left:11%;margin-right:11%} 
+.imgstyle{ height:400px; width: 620px  ;}}
 
 
 @media screen  and (max-width: 1200px) {
